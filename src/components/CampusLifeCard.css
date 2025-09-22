@@ -1,0 +1,152 @@
+/* Typography: Poppins fallback if Google Fonts link is present in HTML. 
+   Alternatively: import "@fontsource/poppins"; in JS bundlers. */
+:root {
+  --cl-primary: #f26d21;
+  --cl-bg-light: #f9f9f9;
+  --cl-bg-dark: #121212;
+  --cl-text-light: #111827;
+  --cl-text-dark: #f3f4f6;
+
+  --cl-radius: 8px;
+  --cl-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+}
+
+/* Page wrapper (Tailwind: bg-background-light dark:bg-background-dark font-display flex items-center justify-center min-h-screen p-4) */
+.cl-page {
+  background-color: var(--cl-bg-light);
+  min-height: 100vh;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Dark mode via a .dark class on <html> or <body> */
+.dark .cl-page {
+  background-color: var(--cl-bg-dark);
+}
+
+/* Card container (Tailwind: max-w-6xl w-full bg-white dark:bg-zinc-800 rounded-lg shadow-lg overflow-hidden flex flex-col md:flex-row) */
+.cl-card {
+  max-width: 72rem; /* Tailwind's max-w-6xl */
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: var(--cl-radius);
+  box-shadow: var(--cl-shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.dark .cl-card {
+  background-color: #27272a; /* zinc-800 */
+}
+
+/* Media section (Tailwind: md:w-1/2) */
+.cl-media {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .cl-card {
+    flex-direction: row;
+  }
+  .cl-media {
+    width: 50%;
+  }
+}
+
+/* Image (Tailwind: object-cover h-full w-full) */
+.cl-media-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Content section (Tailwind: md:w-1/2 p-12 flex flex-col justify-center items-center text-center) */
+.cl-content {
+  width: 100%;
+  padding: 48px; /* Tailwind p-12 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .cl-content {
+    width: 50%;
+  }
+}
+
+/* Title (Tailwind: text-4xl font-bold text-gray-800 dark:text-white) */
+.cl-title {
+  font-size: 2.25rem; /* 36px */
+  line-height: 2.5rem; /* 40px */
+  font-weight: 700;
+  color: #1f2937; /* gray-800 */
+  margin: 0;
+}
+
+.dark .cl-title {
+  color: #ffffff;
+}
+
+/* Underline (Tailwind: w-16 h-1 bg-primary mt-4 mb-8) */
+.cl-title-underline {
+  width: 4rem;
+  height: 4px;
+  background-color: var(--cl-primary);
+  margin-top: 16px;
+  margin-bottom: 32px;
+  border-radius: 9999px;
+}
+
+/* Description (Tailwind: text-gray-600 dark:text-gray-300 mb-8 leading-relaxed) */
+.cl-description {
+  color: #4b5563; /* gray-600 */
+  line-height: 1.625; /* leading-relaxed */
+  margin: 0 0 32px 0;
+}
+
+.dark .cl-description {
+  color: #d1d5db; /* gray-300 */
+}
+
+/* CTA button (Tailwind: inline-flex items-center text-primary border border-primary rounded px-6 py-2 transition-colors hover:bg-primary hover:text-white dark:hover:text-white w-fit) */
+.cl-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--cl-primary);
+  border: 1px solid var(--cl-primary);
+  border-radius: var(--cl-radius);
+  padding: 8px 24px; /* py-2 px-6 */
+  text-decoration: none;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.cl-cta:hover {
+  background-color: var(--cl-primary);
+  color: #ffffff;
+  border-color: var(--cl-primary);
+}
+
+/* Ensure icon inherits hover color */
+.cl-cta-icon {
+  font-size: 20px;
+  line-height: 1;
+  display: inline-flex;
+}
+
+/* Optional: improve focus visibility */
+.cl-cta:focus {
+  outline: 2px solid var(--cl-primary);
+  outline-offset: 2px;
+}
