@@ -1,0 +1,110 @@
+:root {
+  --spg-primary: #f97316;  /* orange */
+  --spg-bg-light: #ffffff;
+  --spg-bg-dark: #1f2937;
+  --spg-text: #f97316;
+  --spg-radius: 4px;
+  --spg-focus-ring: 2px;
+}
+
+/* Center page */
+.spg-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--spg-bg-light);
+  /* min-height: 100vh; */
+}
+
+/* Entire clickable button wrapper */
+.spg-wrap.spg-button {
+  position: relative;                 /* for swipe layer */
+  isolation: isolate;                 /* keep overlay stacking local */
+  overflow: hidden;                   /* clip swipe */
+  margin-top: 24px;
+  display: inline-flex;               /* size to content */
+  align-items: center;
+  justify-content: center;
+  gap: 35px;                          /* space between label and icon */
+  width: auto;
+  max-width: none;
+  padding: 12px 16px;
+  border: 1px solid var(--spg-primary);
+  border-radius: var(--spg-radius);
+  background: var(--spg-bg-light);
+  color: var(--spg-text);             /* initial label color */
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+  transition:
+    color 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease,
+    box-shadow 160ms ease;
+}
+
+/* Swipe fill layer (slides in from left) */
+.spg-wrap.spg-button::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--spg-primary);
+  transform: translateX(-100%);       /* start outside left */
+  transition: transform 260ms ease;   /* swipe timing */
+  z-index: -1;                        /* under text/icon */
+}
+
+/* Hover: show focus ring and swipe fill, invert text color */
+.spg-wrap.spg-button:hover {
+  color: #fff;                        /* turn label white */
+  box-shadow: 0 0 0 var(--spg-focus-ring) rgba(249, 115, 22, 0.5);
+}
+.spg-wrap.spg-button:hover::before {
+  transform: translateX(0);           /* fill left -> right */
+}
+
+/* Text inside the button (kept for specificity if nested) */
+.spg-input-text {
+  color: inherit;                      /* follow parent color */
+}
+
+/* Arrow icon */
+.spg-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  transition: transform 160ms ease, opacity 160ms ease;
+}
+.spg-wrap.spg-button:hover .spg-icon {
+  transform: translateX(4px);          /* subtle nudge right on hover */
+}
+
+/* Keyboard accessibility */
+.spg-wrap.spg-button:focus-visible {
+  outline: none;
+  box-shadow:
+    0 0 0 var(--spg-focus-ring) rgba(249,115,22,0.65),
+    0 0 0 calc(var(--spg-focus-ring) + 2px) rgba(249,115,22,0.35);
+}
+
+/* Optional: allow wrapping on very small screens */
+@media (max-width: 360px) {
+  .spg-wrap.spg-button { white-space: normal; }
+}
+
+/* Dark mode */
+.dark .spg-page {
+  background: var(--spg-bg-dark);
+}
+.dark .spg-wrap.spg-button {
+  background: var(--spg-bg-dark);
+  border-color: var(--spg-primary);
+  color: var(--spg-primary);          /* initial label in dark */
+}
+.dark .spg-wrap.spg-button::before {
+  background: var(--spg-primary);     /* same orange swipe */
+}
+.dark .spg-wrap.spg-button:hover {
+  color: #fff;                        /* white text on hover in dark */
+}
