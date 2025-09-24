@@ -1,0 +1,189 @@
+/* Wrapper establishes positioning context for the centered hamburger */
+.tu-navbar-wrap {
+  position: relative;
+  z-index: 100;
+}
+
+/* Top bar */
+.tu-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 50px;
+  position: relative; /* anchor for absolute hamburger */
+}
+
+.tu-logo {
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+}
+
+/* Right cluster (menu + CTA) on the right edge */
+.tu-right-cluster {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-left: auto;
+}
+
+.tu-nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  align-items: center;
+}
+
+.tu-nav-menu li { position: relative; }
+
+.tu-nav-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 0;
+  transition: color 0.3s ease;
+}
+.tu-nav-menu a:hover { color: #ccc; }
+
+.tu-apply-btn {
+  background: #6441A4;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  color: #fff;
+  text-decoration: none;
+}
+.tu-apply-btn:hover { background: #5a3a93; }
+
+/* Base hamburger style */
+.tu-hamburger {
+  display: flex;            /* always visible */
+  flex-direction: column;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
+.tu-hamburger span {
+  width: 28px;
+  height: 3px;
+  background: #eaeaea;
+  margin: 4px 0;
+  transition: 0.3s;
+  border-radius: 2px;
+}
+
+/* Center the hamburger between top menu and secondary row */
+.tu-hamburger-center {
+  position: absolute;
+  right: 20px;             /* distance from right edge */
+  top: calc(100% + -80px);   /* below the top bar */
+  transform: translateY(-50%); /* vertically center between rows */
+  /* Explanation: nav bottom (100%) + 8px spacing, then pull up 50% of its own height,
+     placing it roughly in the gap between the two rows, like the sample image */
+  z-index: 201;
+}
+
+/* Active (X) animation */
+.tu-hamburger-active span:nth-child(1) {
+  transform: rotate(-45deg) translate(-6px, 7px);
+}
+.tu-hamburger-active span:nth-child(2) { opacity: 0; }
+.tu-hamburger-active span:nth-child(3) {
+  transform: rotate(45deg) translate(-6px, -7px);
+}
+
+/* Secondary row */
+.tu-secondary-nav {
+  display: flex;
+  justify-content: right;
+  gap: 40px;
+  padding: 0 50px 30px;
+  font-size: 14px;
+  margin-right: 30px;
+}
+.tu-secondary-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+.tu-secondary-nav a:hover { color: #ccc; }
+
+/* Mobile dropdown panel */
+.tu-navmenu-active {
+  display: flex !important;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.95);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  gap: 20px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+/* Responsive rules */
+@media (max-width: 1024px) {
+  .tu-navbar { padding: 20px 30px; }
+  .tu-nav-menu { gap: 20px; }
+  .tu-nav-menu a { font-size: 13px; }
+  .tu-secondary-nav { gap: 25px; padding: 0 30px 30px; }
+}
+
+@media (max-width: 768px) {
+  .tu-nav-menu { display: none; }
+  .tu-hamburger { display: flex; }
+  /* Adjust center placement for tighter header on mobile */
+  .tu-hamburger-center {
+    right: 16px;
+    top: calc(100% + 6px);
+  }
+  .tu-navbar { padding: 15px 20px; }
+  .tu-secondary-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    font-size: 12px;
+    padding: 0 20px 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tu-secondary-nav {
+    font-size: 11px;
+    gap: 12px;
+    padding: 0 15px 25px;
+  }
+  .tu-secondary-nav a {
+    padding: 5px 8px;
+    border-radius: 3px;
+    background: rgba(255,255,255,0.1);
+  }
+}
+
+/* Show hamburger on all screen sizes */
+.tu-hamburger {
+  display: flex;           /* was: none; */
+  flex-direction: column;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+
+/* Keep the centered positioning you added */
+
+
+/* Optional: remove any media query hiding */
+@media (max-width: 768px) {
+  /* do NOT hide .tu-hamburger here */
+  .tu-hamburger-center { right: 16px; top: calc(100% + 6px); }
+}
+
+
