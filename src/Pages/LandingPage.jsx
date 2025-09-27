@@ -5,6 +5,7 @@ import EventCalendar from "../components/EventCalendar";
 import HeroTU from "../components/Hero";
 import Navbar from "../components/navbar";
 import NewsletterSubscribe from "../components/NewsletterSubscribe";
+import SchoolsDesignReplica from "../components/SchoolsDesignCards";
 import SearchProgrammes from "../components/SearchProgrammes";
 import TaglineHero from "../components/TaglineHero";
 import UniversityFooter from "../components/UniversityFooter";
@@ -16,9 +17,11 @@ export default function LandingPage() {
     <>
       <HeroTU />
       <AboutProgrammesTU/>
+       <SchoolsDesignReplica/>
       <EngineeringHero/>
       <SearchProgrammes/>
       <CampusLifeCard/>
+     
       <EventCalendar/>
       <WhyTcet/>
       <TaglineHero/>

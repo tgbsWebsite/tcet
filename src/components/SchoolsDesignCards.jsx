@@ -167,7 +167,7 @@ export default function SchoolsDesignCards() {
         </div>
 
         {/* Controls */}
-        <div className="sdc_controls">
+        {/* <div className="sdc_controls">
           <button className="sdc_navBtn" onClick={prev} aria-label="Previous slide">
             ‹
           </button>
@@ -179,7 +179,7 @@ export default function SchoolsDesignCards() {
           <button className="sdc_navBtn" onClick={next} aria-label="Next slide">
             ›
           </button>
-        </div>
+        </div> */}
 
         <div className="sdc_dots" role="tablist" aria-label="Slides">
           {items.map((it, i) => (

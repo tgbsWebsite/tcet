@@ -117,14 +117,12 @@ export default function AboutProgrammesTU() {
       <section className="tuap-about">
         <div className="tuap-container">
           <h2 className="tuap-about-title">About Us</h2>
+            <div className="cl-title-underline" />
           <p className="tuap-subhdr">Sub Header</p>
           <p className="tuap-about-text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-            erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo
-            consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla
-            facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent lup.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus asperiores minus, nobis consequatur tempore distinctio nihil velit officia quae officiis sint facilis vitae quia mollitia rerum repudiandae maxime saepe iste, reiciendis itaque animi nesciunt rem? Rerum, non nesciunt fugit, reprehenderit saepe nobis corporis ratione facilis maxime consequuntur impedit possimus esse, necessitatibus iure. Voluptas dolorem quia sit quaerat nam harum temporibus id minima veritatis possimus dicta, modi officia? Eos mollitia similique molestiae nisi pariatur deleniti beatae aut cum cumque labore, ducimus quod, soluta odit tempore voluptates velit optio libero repudiandae, totam tenetur aspernatur ut dolore quo dolor? Sed quasi commodi fugit.
           </p>
-          <div className="cl-title-underline" />
+          {/* <div className="cl-title-underline" /> */}
         </div>
       </section>
 

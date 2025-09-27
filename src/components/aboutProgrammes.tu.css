@@ -1,8 +1,9 @@
 /* Global container */
 .tuap-container {
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
   padding: 0 20px;
+  
 }
 
 /* Hero */
@@ -11,7 +12,7 @@
 /* About */
 .tuap-about {
   background: white;
-  padding-top: 80px;
+  padding-top: 55px;
     padding-bottom: 20px;
   text-align: center;
 }
@@ -27,13 +28,13 @@
   margin-bottom: 40px;
 }
 .tuap-about-text {
-  max-width: 800px;
+  /* max-width: 800px; */
   margin: 0 auto 40px;
   color: #666;
-  font-size: 1em;
+  font-size: 1.2em;
   line-height: 1.8;
   align-items: justify;
-  text-align: center;
+  text-align: justify;
 }
 .tuap-orange-line {
   width: 60px;

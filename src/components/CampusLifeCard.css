@@ -120,7 +120,8 @@
   line-height: 1.7;
   text-align: left;
   margin: 0 clamp(28px, 6vw, 96px) 28px clamp(28px, 6vw, 96px);
-  max-width: 56ch;          /* optional: comfortable line length */
+  max-width: 56ch; 
+  font-size: 1.2em;         /* optional: comfortable line length */
 }
 
 .dark .cl-description { color: #d1d5db; }
