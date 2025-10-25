@@ -1,0 +1,250 @@
+/* Programmes Page Wrapper */
+.programmes-page-wrapper {
+  background-color: #f8f9fa;
+  font-family: var(--font-family-base, 'FKGroteskNeue', 'Geist', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
+  color: #d3d4d4;
+  min-height: 100vh;
+}
+
+/* Dark mode for wrapper */
+@media (prefers-color-scheme: dark) {
+  .programmes-page-wrapper {
+    background-color: #f3eeee;
+    color: #f5f5f5;
+  }
+}
+
+/* Hero Section */
+.programmes-hero-section {
+  width: 100%;
+  background-color:#726f6f;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+@media (prefers-color-scheme: dark) {
+  .programmes-hero-section {
+    background-color: #d4d2d2;
+  }
+}
+
+.programmes-hero-title {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #000000;
+  letter-spacing: 0.5px;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .programmes-hero-title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .programmes-hero-title {
+    color: #000000;
+  }
+}
+
+/* Main Container */
+.programmes-main-container {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 3rem 1rem;
+}
+
+@media (min-width: 768px) {
+  .programmes-main-container {
+    padding: 4rem 2rem;
+  }
+}
+
+/* Programme Cards Container */
+.programmes-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .programmes-cards-container {
+    gap: 3rem;
+  }
+}
+
+/* Programme Card */
+.programme-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 0;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: box-shadow 0.3s ease;
+}
+
+.programme-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+@media (min-width: 768px) {
+  .programme-card {
+    flex-direction: row;
+    min-height: 280px;
+  }
+
+  .programme-card-reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .programme-card {
+    background-color: #2a2a2a;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .programme-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* Programme Image Section */
+.programme-image-section {
+  flex: 1;
+  background-color: #d4d4d4;
+  min-height: 200px;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .programme-image-section {
+    min-height: auto;
+  }
+}
+
+.programme-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.programme-card:hover .programme-image {
+  transform: scale(1.05);
+}
+
+/* Programme Content Section */
+.programme-content-section {
+  flex: 1;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (min-width: 768px) {
+  .programme-content-section {
+    padding: 2.5rem 3rem;
+  }
+}
+
+/* Programme Title */
+.programme-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: #fffbfb;
+  margin: 0 0 1rem 0;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .programme-title {
+    font-size: 0.95rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .programme-title {
+    color: #ffffff;
+  }
+}
+
+/* Programme Description */
+.programme-description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #4a4a4a;
+  margin: 0 0 1.5rem 0;
+}
+
+@media (min-width: 768px) {
+  .programme-description {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .programme-description {
+    color: #cccccc;
+  }
+}
+
+/* Explore Button */
+.programme-explore-btn {
+  align-self: flex-start;
+  padding: 0.6rem 1.8rem;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #d97706;
+  background-color: transparent;
+  border: 1.5px solid #d97706;
+  border-radius: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.programme-explore-btn:hover {
+  background-color: #d97706;
+  color: #ffffff;
+  transform: translateX(5px);
+}
+
+.programme-explore-btn:focus {
+  outline: 2px solid #d97706;
+  outline-offset: 2px;
+}
+
+@media (prefers-color-scheme: dark) {
+  .programme-explore-btn {
+    color: #fbbf24;
+    border-color: #fbbf24;
+  }
+
+  .programme-explore-btn:hover {
+    background-color: #fbbf24;
+    color: #000000;
+  }
+
+  .programme-explore-btn:focus {
+    outline-color: #fbbf24;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+  .programme-card,
+  .programme-card-reverse {
+    flex-direction: column;
+  }
+
+  .programme-image-section {
+    height: 200px;
+  }
+}

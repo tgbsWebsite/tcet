@@ -8,8 +8,10 @@ import NewsletterSubscribe from "../components/NewsletterSubscribe";
 import SchoolsDesignReplica from "../components/SchoolsDesignCards";
 import SearchProgrammes from "../components/SearchProgrammes";
 import TaglineHero from "../components/TaglineHero";
-import UniversityFooter from "../components/UniversityFooter";
+import UniversityFooter from "../components/Footer";
 import WhyTcet from "../components/WhyTcet";
+import GlobalCollaborations from "../components/GlobalCollaborations";
+import Accreditation from "../components/Accreditation";
 
 
 export default function LandingPage() {
@@ -17,13 +19,15 @@ export default function LandingPage() {
     <>
       <HeroTU />
       <AboutProgrammesTU/>
-       <SchoolsDesignReplica/>
+       {/* <SchoolsDesignReplica/> */}
       <EngineeringHero/>
       <SearchProgrammes/>
       <CampusLifeCard/>
      
       <EventCalendar/>
-      <WhyTcet/>
+      <GlobalCollaborations/>
+      <Accreditation/>
+
       <TaglineHero/>
       <NewsletterSubscribe/>
       <UniversityFooter/>

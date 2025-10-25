@@ -1,110 +1,101 @@
-import React, { useEffect, useRef } from "react";
+import React, { useState } from "react";
 import "./navbar.css";
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
-  const hamburgerRef = useRef(null);
-  const menuRef = useRef(null);
-
-  useEffect(() => {
-    const hamburger = hamburgerRef.current;
-    const menu = menuRef.current;
-
-    const onDocClick = (e) => {
-      if (!hamburger || !menu) return;
-      if (!hamburger.contains(e.target) && !menu.contains(e.target)) {
-        hamburger.classList.remove("tu-hamburger-active");
-        menu.classList.remove("tu-navmenu-active");
-        hamburger.setAttribute("aria-expanded", "false");
-      }
-    };
-
-    const onResize = () => {
-      if (window.innerWidth > 768 && hamburger && menu) {
-        hamburger.classList.remove("tu-hamburger-active");
-        menu.classList.remove("tu-navmenu-active");
-        hamburger.setAttribute("aria-expanded", "false");
-      }
-    };
-
-    document.addEventListener("click", onDocClick);
-    window.addEventListener("resize", onResize);
-    return () => {
-      document.removeEventListener("click", onDocClick);
-      window.removeEventListener("resize", onResize);
-    };
-  }, []);
-
-  const toggleMenu = () => {
-    // Disabled toggle functionality for now
-    // const hamburger = hamburgerRef.current;
-    // const menu = menuRef.current;
-    // if (!hamburger || !menu) return;
-    // hamburger.classList.toggle("tu-hamburger-active");
-    // menu.classList.toggle("tu-navmenu-active");
-    // const expanded = hamburger.classList.contains("tu-hamburger-active");
-    // hamburger.setAttribute("aria-expanded", expanded ? "true" : "false");
-  };
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div>
-      <header className="tu-navbar-wrap">
-        <nav className="tu-navbar" style={{ marginRight: "30px" }}>
-          <div className="tu-logo">University Logo</div>
+    <header className="uni-header">
+      <div className="uni-diagonal-bg">
+        <div className="uni-container">
+          <div className="uni-header-content">
+            {/* Logo and Title Section */}
+            <div className="uni-logo-section">
+    <Link to="/">
+  <img
+    src="/Asset 1 (1).svg"
+    alt="University Logo"
+    className="uni-logo-img"
+  />
+</Link>
 
-          <div className="tu-right-cluster">
-            <ul className="tu-nav-menu" ref={menuRef}>
-              <li>
-                <a href="#">TEG</a>
-              </li>
-              <li>
-                <a href="#">Faculty</a>
-              </li>
-              <li>
-                <a href="#">Alumni</a>
-              </li>
-              <li>
-                <a href="#">Training &amp; Placement</a>
-              </li>
-              <li>
-                <a href="#">Research &amp; Development</a>
-              </li>
-              <li>
-                <a href="#">Blogs</a>
-              </li>
-              <li>
-                <a href="#">Careers</a>
-              </li>
-            </ul>
-            <a className="tu-apply-btn" href="#">
-              APPLY NOW
-            </a>
+            </div>
+
+            {/* Navigation Section */}
+            <div className="uni-nav-section">
+   
+
+              <div className="uni-nav-wrapper">
+                {/* Top Navigation */}
+                <nav className="uni-nav-top">
+                  <ul className="uni-nav-list">
+                    <li><a href="https://thakureducation.org/" className="uni-nav-link">TEG</a></li>
+                    {/* <li><span className="uni-nav-divider">|</span></li> */}
+                    <li><a href="#" className="uni-nav-link">Faculty</a></li>
+                    {/* <li><span className="uni-nav-divider">|</span></li> */}
+                    <li><a href="#" className="uni-nav-link">Alumni</a></li>
+                    {/* <li><span className="uni-nav-divider">|</span></li> */}
+                    <li><a href="#" className="uni-nav-link">Training  & Placement</a></li>
+                    {/* <li><span className="uni-nav-divider">|</span></li> */}
+                    <li><a href="#" className="uni-nav-link">Research & Development</a></li>
+                    {/* <li><span className="uni-nav-divider">|</span></li> */}
+                    <li><a href="#" className="uni-nav-link">Blogs</a></li>
+                    {/* <li><span className="uni-nav-divider">|</span></li> */}
+                    <li><a href="#" className="uni-nav-link">Careers</a></li>
+                   
+                    
+                    <li>
+                      <a href="#" className="uni-apply-btn">
+                        Apply Now
+                      </a>
+                    </li>
+                  </ul>
+                </nav>
+
+                {/* Bottom Navigation */}
+                <nav className="uni-nav-bottom">
+                  <ul className="uni-nav-list-bottom">
+                    <li><a href="/about" className="uni-nav-link-bottom">About Us</a></li>
+                    {/* <li><span className="uni-nav-divider">|</span></li> */}
+                    <li><a href="/programmespage" className="uni-nav-link-bottom">Programmes</a></li>
+                    {/* <li><span className="uni-nav-divider">|</span></li> */}
+                    <li><a href="#" className="uni-nav-link-bottom">Admissions</a></li>
+                    {/* <li><span className="uni-nav-divider">|</span></li> */}
+                    <li><a href="#" className="uni-nav-link-bottom">Academics</a></li>
+                    {/* <li><span className="uni-nav-divider">|</span></li> */}
+                    <li><a href="#" className="uni-nav-link-bottom">Life@TU</a></li>
+                    {/* <li><span className="uni-nav-divider">|</span></li> */}
+                    <li><a href="#" className="uni-nav-link-bottom">NCC</a></li>
+                    {/* <li><span className="uni-nav-divider">|</span></li> */}
+                    <li><a href="#" className="uni-nav-link-bottom">Web Portals</a></li>
+                    {/* <li><span className="uni-nav-divider">|</span></li> */}
+                    <li><a href="#" className="uni-nav-link-bottom">Contact Us</a></li>
+          
+                  </ul>
+                </nav>
+              </div>
+
+              {/* Hamburger Menu */}
+{/* Hamburger Menu */}
+<div className="uni-menu-toggle">
+  <button
+    className="uni-hamburger-btn"
+    onClick={() => setMenuOpen(!menuOpen)}
+    aria-label="Toggle menu"
+  >
+    <img 
+      src="/menu.svg" 
+      alt="Menu" 
+      className="uni-hamburger-icon"
+    />
+  </button>
+</div>
+
+            </div>
           </div>
-        </nav>
-        <div>
-          <button
-            ref={hamburgerRef}
-            className="tu-hamburger tu-hamburger-center"
-            aria-label="Toggle menu"
-            aria-expanded="false"
-            onClick={toggleMenu}
-            type="button"
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
         </div>
-        <div className="tu-secondary-nav">
-          <a href="#">About Us</a>
-          <a href="#">Programmes</a>
-          <a href="#">Admissions</a>
-          <a href="#">Academics</a>
-          <a href="#">Life @ TU</a>
-          <a href="#">NCC</a>
-          <a href="#">Web Portals</a>
-          <a href="#">Contact Us</a>
-        </div>
-      </header>
-    </div>
+      </div>
+    </header>
   );
 }

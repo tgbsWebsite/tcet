@@ -14,7 +14,7 @@
 /* Section background band */
 .ns-section {
   background: var(--ns-bg-light);
-  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+
   padding-block: clamp(24px, 5vw, 56px); /* compact */
 }
 

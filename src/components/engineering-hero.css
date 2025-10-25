@@ -9,8 +9,7 @@
 .engv-root {
   background: var(--engv-bg);
   color: var(--engv-text);
-  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica,
-    Arial, sans-serif;
+
 }
 
 /* Programmes heading strip */
@@ -43,7 +42,7 @@
 .engv-hero {
   position: relative;
   width: 100%;
-  height: 300px;
+  height: 500px;
   overflow: hidden;
 }
 
@@ -75,8 +74,8 @@
 .engv-card {
   padding: 2rem;
   border-radius: 0; /* sharp corners */
-  max-width: 600px; /* increased width */
-  min-height: 200px;
+  max-width: 700px; /* increased width */
+  height: 250px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -170,3 +169,4 @@
     padding: 4rem;
   }
 }
+

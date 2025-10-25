@@ -1,0 +1,451 @@
+/* Wrapper */
+.acc-wrapper {
+  background-color: #D9D9D9;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* padding: 1rem; */
+
+}
+
+/* Container */
+.acc-container {
+  width: 100%;
+  max-width: 1280px;
+  
+  margin: 0 auto;
+
+}
+.heading {
+    background-color: #ffffff;
+    margin-bottom: 0px !important;
+
+}
+
+/* Grid Layout */
+.acc-grid {
+   
+  display: grid;
+  grid-template-columns: 1fr;
+  /* gap: 2rem; */
+  align-items: center;
+}
+
+/* NAAC Section */
+.acc-naac-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.acc-naac-content {
+  text-align: center;
+}
+
+.acc-label {
+  font-size: 1.125rem;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+}
+
+.acc-naac-grade {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.acc-naac-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.acc-naac-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #334d80;
+  line-height: 1;
+  margin: 0;
+}
+
+.acc-grade-text {
+  font-size: 1.875rem;
+  font-weight: 500;
+  color: #334d80;
+  margin: -0.5rem 0 0 0;
+  line-height: 1;
+}
+
+.acc-grade-letter {
+  font-size: 6rem;
+  font-weight: 700;
+  color: #334d80;
+  line-height: 1;
+  margin-left: -0.25rem;
+}
+
+/* Award Box */
+.acc-award-box {
+  grid-column: span 1;
+}
+
+.acc-award-content {
+  background-color: #334d80;
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem 1.5rem;
+  border-radius: 0.25rem;
+}
+
+.acc-award-text {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* NBA Section */
+.acc-nba-section {
+  grid-column: span 1;
+}
+
+.acc-nba-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+}
+
+.acc-nba-box {
+  background-color: #334d80;
+  color: #ffffff;
+  text-align: center;
+  padding: 3rem 3rem;
+  /* border-radius: 0.25rem; */
+  width: 100%;
+}
+
+.acc-nba-text {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.acc-nba-logo {
+  text-align: center;
+  color: #334d80;
+  flex-shrink: 0;
+}
+
+.acc-nba-title {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  margin: 0;
+  line-height: 1;
+}
+
+.acc-nba-subtitle {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* UGC Section */
+.acc-ugc-section {
+  grid-column: span 1;
+}
+
+.acc-ugc-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4rem;
+}
+
+.acc-diamonds {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.acc-diamond-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Diamond Shape */
+.acc-diamond {
+  width: 100px;
+  height: 100px;
+  background-color: #334d80;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.acc-diamond-text {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.acc-diamond-label {
+  background-color: #334d80;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.25rem 0.75rem;
+  margin-top: 0.25rem;
+  border-radius: 0.125rem;
+  width: 100%;
+  text-align: center;
+}
+
+.acc-ugc-box {
+  background-color: #334d80;
+  color: #ffffff;
+  text-align: center;
+ padding: 3rem 3rem;
+  border-radius: 0.25rem;
+  width: 100%;
+}
+
+.acc-ugc-text {
+  font-size: 1.125rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Tablet & Desktop Layout */
+@media (min-width: 768px) {
+  .acc-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .acc-naac-section {
+    grid-column: span 1;
+  }
+
+  .acc-award-box {
+    grid-column: span 1;
+  }
+
+  .acc-nba-section {
+    grid-column: span 2;
+  }
+
+  .acc-nba-wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .acc-nba-box {
+    flex-grow: 1;
+  }
+
+  .acc-ugc-section {
+    grid-column: span 2;
+  }
+
+  .acc-ugc-wrapper {
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .acc-ugc-box {
+    flex-grow: 1;
+  }
+
+  .acc-naac-content {
+    text-align: left;
+  }
+
+  .acc-naac-grade {
+    justify-content: flex-start;
+  }
+}
+
+@media (min-width: 1024px) {
+  .acc-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .acc-naac-section {
+    grid-column: span 1;
+  }
+
+  .acc-award-box {
+    grid-column: span 2;
+  }
+
+  .acc-nba-section {
+    grid-column: span 3;
+  }
+
+  .acc-ugc-section {
+    grid-column: span 3;
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 640px) {
+  .acc-container {
+    padding: 1.5rem;
+  }
+
+  .acc-naac-title {
+    font-size: 2.5rem;
+  }
+
+  .acc-grade-text {
+    font-size: 1.5rem;
+  }
+
+  .acc-grade-letter {
+    font-size: 5rem;
+  }
+
+  .acc-award-text,
+  .acc-nba-text,
+  .acc-ugc-text {
+    font-size: 1rem;
+  }
+
+  .acc-nba-title {
+    font-size: 2.5rem;
+  }
+
+  .acc-diamond {
+    width: 80px;
+    height: 80px;
+  }
+
+  .acc-diamond-text {
+    font-size: 1.25rem;
+  }
+}
+/* Extra Large Boxes */
+.acc-award-content {
+  background-color: #334d80;
+  color: #ffffff;
+  text-align: center;
+  padding: 2.5rem 3rem; /* Extra large padding */
+  /* border-radius: 0.75rem; */
+  min-height: 100px; /* Ensure minimum height */
+}
+
+.acc-award-text {
+  font-size: 1.5rem; /* Extra large text */
+  /* font-weight: 600; */
+  margin: 0;
+  line-height: 1.5;
+}
+
+.acc-nba-box {
+  background-color: #334d80;
+  color: #ffffff;
+  text-align: center;
+  padding: 2.5rem 3rem;
+  /* border-radius: 0.75rem; */
+  width: 100%;
+  min-height: 100px;
+}
+
+.acc-nba-text {
+  font-size: 1.5rem;
+  /* font-weight: 600; */
+  margin: 0;
+  line-height: 1.5;
+}
+
+.acc-ugc-box {
+  background-color: #334d80;
+  color: #ffffff;
+  text-align: center;
+  padding: 2.4rem 3rem;
+  /* border-radius: 0.75rem; */
+  width: 100%;
+  min-height: 100px;
+}
+
+.acc-ugc-text {
+  font-size: 1.5rem;
+  /* font-weight: 600; */
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Extra Large Diamonds */
+.acc-diamond {
+  width: 140px;
+  height: 140px;
+  background-color: #334d80;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.acc-diamond-text {
+  color: #ffffff;
+  font-size: 2rem;
+
+}
+
+.acc-diamond-label {
+  background-color: #334d80;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.75rem 1.25rem;
+  margin-top: 0.75rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  text-align: center;
+}
+/* Option 1: Square fixed size */
+.acc-naac-logo {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+/* Option 2: Wider fixed size */
+.acc-naac-logo {
+  width: 180px;
+  height: 120px;
+  object-fit: contain;
+}
+
+/* Option 3: Taller fixed size */
+.acc-naac-logo {
+  width: 120px;
+  height: 150px;
+  object-fit: contain;
+}
+
+/* Option 4: Large fixed size */
+.acc-naac-logo {
+  width: 200px;
+  height: 160px;
+  object-fit: contain;
+}
+
+/* NBA Logo - Fixed size */
+.acc-nba-image {
+  width: 300px;  /* Fixed width */
+  height: 250px; /* Fixed height */
+  object-fit: contain;
+}
+
+.acc-naac-logo {
+     width: 300px;  /* Fixed width */
+  height: 200px; /* Fixed height */
+  object-fit: contain;
+}

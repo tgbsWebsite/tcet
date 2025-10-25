@@ -1,5 +1,4 @@
 import React from "react";
-
 import "./hero.css";
 import Navbar from "./navbar";
 
@@ -12,17 +11,22 @@ export default function HeroTU() {
 
     return (
         <div className="tu-hero">
+            <video className="tu-hero-video" autoPlay muted loop playsInline>
+                <source src="/WhatsApp Video 2025-10-25 at 4.00.15 PM.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
+
             <Navbar />
 
             <div className="tu-hero-content">
-                <button
+                {/* <button
                     className="tu-play-btn"
                     aria-label="Play video"
                     type="button"
                     onClick={onPlayClick}
                 />
-                <p className="tu-video-text">Video here on the slider</p>
-                <h1 className="tu-tagline">TAGLINE</h1>
+               */}
+                <h1 className="tu-tagline">Legacy Reimagined Future Redefined</h1>
             </div>
         </div>
     );
