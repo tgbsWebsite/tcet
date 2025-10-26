@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./globalCollaborations.css";
+import "./GlobalCollaborations.css";
 
 export default function GlobalCollaborations() {
   const [activeTab, setActiveTab] = useState(0);
