@@ -9,7 +9,7 @@ const ProgrammesPage = () => {
     {
       id: 1,
       title: "UNDERGRADUATE PROGRAMMES",
-      description: "Explore our diverse range of undergraduate programs designed to build a strong foundation for your career. Our programs combine theoretical knowledge with practical skills to prepare you for the challenges of tomorrow.",
+     
       imageSrc: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&h=600&fit=crop",
       imagePosition: "left",
       buttonText: "Explore →"
@@ -17,7 +17,7 @@ const ProgrammesPage = () => {
     {
       id: 2,
       title: "POST GRADUATE PROGRAMMES",
-      description: "Advance your expertise with our specialized postgraduate programs. Designed for professionals and recent graduates, these programs offer advanced knowledge and research opportunities in cutting-edge fields.",
+     
       imageSrc: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800&h=600&fit=crop",
       imagePosition: "right",
       buttonText: "Explore →"
@@ -25,7 +25,7 @@ const ProgrammesPage = () => {
     {
       id: 3,
       title: "DOCTORAL PROGRAMMES",
-      description: "Pursue excellence in research with our doctoral programs. Work alongside renowned faculty members and contribute to groundbreaking research in your field of interest. Shape the future of academia and industry.",
+
       imageSrc: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=800&h=600&fit=crop",
       imagePosition: "left",
       buttonText: "Explore →"

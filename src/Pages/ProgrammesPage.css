@@ -2,49 +2,35 @@
 .programmes-page-wrapper {
   background-color: #f8f9fa;
   font-family: var(--font-family-base, 'FKGroteskNeue', 'Geist', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif);
-  color: #d3d4d4;
+  color: #232323;
   min-height: 100vh;
-}
-
-/* Dark mode for wrapper */
-@media (prefers-color-scheme: dark) {
-  .programmes-page-wrapper {
-    background-color: #f3eeee;
-    color: #f5f5f5;
-  }
 }
 
 /* Hero Section */
 .programmes-hero-section {
   width: 100%;
-  background-color:#726f6f;
+  min-height: 220px;
+  background: url('YOUR_HERO_IMAGE_URL_HERE') center center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 3rem 1rem;
   text-align: center;
-}
-
-@media (prefers-color-scheme: dark) {
-  .programmes-hero-section {
-    background-color: #d4d2d2;
-  }
+  position: relative;
 }
 
 .programmes-hero-title {
   font-size: 2rem;
-  font-weight: 400;
-  color: #000000;
+  font-weight: 600;
+  color: #232323;
   letter-spacing: 0.5px;
   margin: 0;
+  text-shadow: 0 4px 16px rgba(255,255,255,0.85);
 }
 
 @media (min-width: 768px) {
   .programmes-hero-title {
     font-size: 2.5rem;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .programmes-hero-title {
-    color: #000000;
   }
 }
 
@@ -75,54 +61,57 @@
   }
 }
 
-/* Programme Card */
-.programme-card {
+/* Programme Card (Uniform height and structure for all cards) */
+.programme-card, .programme-card-reverse {
   display: flex;
   flex-direction: column;
-  background-color: #ffffff;
-  border-radius: 0;
+  background: #fff;
+  border-radius: 0.6rem;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
   transition: box-shadow 0.3s ease;
-}
-
-.programme-card:hover {
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  min-height: 260px;
+  height: 320px;
 }
 
 @media (min-width: 768px) {
-  .programme-card {
+  .programme-card, .programme-card-reverse {
     flex-direction: row;
-    min-height: 280px;
+    min-height: 260px;
+    height: 260px;
   }
-
   .programme-card-reverse {
     flex-direction: row-reverse;
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .programme-card {
-    background-color: #2a2a2a;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-  }
+.programme-card:hover,
+.programme-card-reverse:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+}
 
-  .programme-card:hover {
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
-  }
+/* Image and Content share equal space in all cards */
+.programme-image-section, .programme-content-section {
+  flex: 1 1 0%;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* Programme Image Section */
 .programme-image-section {
-  flex: 1;
-  background-color: #d4d4d4;
-  min-height: 200px;
+  background-color: #ececec;
+  min-height: 180px;
   overflow: hidden;
+  align-items: stretch;
+  justify-content: center;
 }
 
 @media (min-width: 768px) {
   .programme-image-section {
     min-height: auto;
+    height: 100%;
   }
 }
 
@@ -130,20 +119,23 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
   transition: transform 0.3s ease;
 }
 
-.programme-card:hover .programme-image {
+.programme-card:hover .programme-image,
+.programme-card-reverse:hover .programme-image {
   transform: scale(1.05);
 }
 
 /* Programme Content Section */
 .programme-content-section {
-  flex: 1;
   padding: 2rem 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: flex-start;
+  background: none; /* keep content background transparent */
 }
 
 @media (min-width: 768px) {
@@ -154,87 +146,43 @@
 
 /* Programme Title */
 .programme-title {
-  font-size: 0.9rem;
-  font-weight: 600;
-  letter-spacing: 1.5px;
-  color: #fffbfb;
+  font-size: 1.08rem;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: #222222;
   margin: 0 0 1rem 0;
   text-transform: uppercase;
 }
 
-@media (min-width: 768px) {
-  .programme-title {
-    font-size: 0.95rem;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .programme-title {
-    color: #ffffff;
-  }
-}
-
 /* Programme Description */
 .programme-description {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  color: #4a4a4a;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #505050;
   margin: 0 0 1.5rem 0;
-}
-
-@media (min-width: 768px) {
-  .programme-description {
-    font-size: 1rem;
-    line-height: 1.7;
-  }
-}
-
-@media (prefers-color-scheme: dark) {
-  .programme-description {
-    color: #cccccc;
-  }
 }
 
 /* Explore Button */
 .programme-explore-btn {
   align-self: flex-start;
-  padding: 0.6rem 1.8rem;
-  font-size: 0.85rem;
-  font-weight: 500;
-  color: #d97706;
+  padding: 0.6rem 2rem;
+  font-size: 0.94rem;
+  font-weight: 600;
+  color: #e16319;
   background-color: transparent;
-  border: 1.5px solid #d97706;
-  border-radius: 0;
+  border: 1.5px solid #e16319;
+  border-radius: 4px;
   cursor: pointer;
   transition: all 0.3s ease;
   letter-spacing: 0.5px;
 }
 
-.programme-explore-btn:hover {
-  background-color: #d97706;
-  color: #ffffff;
-  transform: translateX(5px);
-}
-
+.programme-explore-btn:hover,
 .programme-explore-btn:focus {
-  outline: 2px solid #d97706;
-  outline-offset: 2px;
-}
-
-@media (prefers-color-scheme: dark) {
-  .programme-explore-btn {
-    color: #fbbf24;
-    border-color: #fbbf24;
-  }
-
-  .programme-explore-btn:hover {
-    background-color: #fbbf24;
-    color: #000000;
-  }
-
-  .programme-explore-btn:focus {
-    outline-color: #fbbf24;
-  }
+  background-color: #e16319;
+  color: #fff;
+  outline: none;
+  transform: translateX(5px);
 }
 
 /* Responsive adjustments */
@@ -242,9 +190,16 @@
   .programme-card,
   .programme-card-reverse {
     flex-direction: column;
+    height: 320px;
+    min-height: 260px;
   }
-
+  .programme-card-reverse {
+    flex-direction: column-reverse;
+  }
   .programme-image-section {
-    height: 200px;
+    height: 180px;
+  }
+  .programme-content-section {
+    padding: 2rem 1rem;
   }
 }
