@@ -12,6 +12,7 @@ import UniversityFooter from "../components/Footer";
 import WhyTcet from "../components/WhyTcet";
 import GlobalCollaborations from "../components/GlobalCollaborations";
 import Accreditation from "../components/Accreditation";
+import PlacementStats from "../components/PlacementStats";
 
 export default function LandingPage() {
   return (
@@ -26,7 +27,7 @@ export default function LandingPage() {
       <EventCalendar />
       <GlobalCollaborations />
       <Accreditation />
-
+      <PlacementStats />
       <TaglineHero />
       <NewsletterSubscribe />
       <UniversityFooter />
