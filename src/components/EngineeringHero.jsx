@@ -1,116 +1,88 @@
-// src/components/EngineeringHero.jsx
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, EffectFade } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/effect-fade";
+import "swiper/css/pagination";
 import "./engineering-hero.css";
 
 const carouselData = [
-    {
-        title: "Engineering & Technology",
-        description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.",
-        cta: "Explore >>",
-        color: "#1F2937",
-        link: "#",
-    },
-    {
-        title: "Vocational Courses",
-        description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.",
-        cta: "Explore >>",
-        color: "#8B2635",
-        link: "#",
-    },
-    {
-        title: "Computer Applications",
-        description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.",
-        cta: "Explore >>",
-        color: "#6B46C1",
-        link: "#",
-    },
-
-    {
-        title: "Management",
-        description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.",
-        cta: "Explore >>",
-        color: "#059669",
-        link: "#",
-    },
+  {
+    title: "Under Grad",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.",
+    cta: "Explore >>",
+    color: "#F6BB3F",
+    image: "/programming-technical-school.jpg",
+    link: "#",
+  },
+  {
+    title: "Post Grad",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.",
+    cta: "Explore >>",
+    color: "#D92329",
+    image: "/connecting-people-with-technology.jpg",
+    link: "#",
+  },
+  {
+    title: "Ph.D",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.",
+    cta: "Explore >>",
+    color: "#FF6B17",
+    image: "/WhatsApp Image 2025-10-25 at 5.26.34 PM.jpeg",
+    link: "#",
+  },
 ];
 
 const EngineeringHero = () => {
-    const [current, setCurrent] = useState(0);
-    const [auto, setAuto] = useState(true);
-    const autoTimer = useRef(null);
-    const resumeTimer = useRef(null);
-
-    const next = () => setCurrent((p) => (p + 1) % carouselData.length);
-    const goTo = (i) => {
-        setCurrent(i);
-        setAuto(false);
-        clearInterval(autoTimer.current);
-        clearTimeout(resumeTimer.current);
-        resumeTimer.current = setTimeout(() => setAuto(true), 10000);
-    };
-
-    useEffect(() => {
-        if (auto) {
-            autoTimer.current = setInterval(next, 4000);
-        }
-        return () => clearInterval(autoTimer.current);
-    }, [auto]);
-
-    useEffect(() => () => clearTimeout(resumeTimer.current), []);
-
-    return (
-        <section className="engv-root">
-            {/* Top heading strip */}
-            <div className="engv-prog">
-                <div className="engv-prog-container">
-                    <h2 className="tuap-about-title">Our Programmes</h2>
-                    <div className="cl-title-underline" />
-                </div>
-            </div>
-
-            {/* Hero with background image + scrim */}
+  return (
+    <section className="engv-root">
+      {/* Top heading strip */}
+      <div className="engv-prog">
+        <div className="engv-prog-container">
+          <h2 className="tuap-about-title">Our Programmes</h2>
+          <div className="cl-title-underline" />
+        </div>
+      </div>
+      <Swiper
+        modules={[Autoplay, Pagination, EffectFade]}
+        loop
+        effect="fade"
+        autoplay={{ delay: 3000, disableOnInteraction: false }}
+        pagination={{
+          clickable: true, // enables click-to-navigate
+        }}
+        className="engv-hero"
+      >
+        {carouselData.map((slide, index) => (
+          <SwiperSlide key={index}>
             <div className="engv-hero">
-                <img
-                    className="engv-hero-img"
-                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOYhr5RE_b-7K-ZBYFlvSVZCg-EbawmWzNbgevXMlxHbvpTigPokAKsVk7VaAVoGvlMz1Nyk1ojeCosFAUK0HKRVb8SzB3MWXB8uHrYS9dU4sg6t2M_wbSj7scXHQVxvLTVBwhwCzeRbbjlTjh9LVQIXJeMfZtqsYTW7p5RHqPd0ULbh0P7AEhM2PpslV994asH2NIKYzbkL7wVTFmwa_KIZted_NV5ZGc-owHOQLUbDBWi-Bk0vwjort1-es5UlP4Pc0IzTcYYRtQ"
-                    alt="Students collaborating and laughing while working on laptops"
-                />
-                <div className="engv-hero-scrim" />
-
-                {/* Foreground card that changes color/content */}
-                <div className="engv-hero-content">
-                    <article
-                        className="engv-card"
-                        style={{ backgroundColor: carouselData[current].color }}
-                    >
-                        <h1 className="engv-title">{carouselData[current].title}</h1>
-                        <p className="engv-text">{carouselData[current].description}</p>
-                        <a className="engv-cta" href={carouselData[current].link}>
-                            {carouselData[current].cta}
-                        </a>
-                    </article>
-
-                    {/* Dots */}
-                    <div className="engv-dots" role="tablist" aria-label="Hero slides">
-                        {carouselData.map((_, i) => (
-                            <button
-                                key={i}
-                                className={`engv-dot ${current === i ? "is-active" : ""}`}
-                                role="tab"
-                                aria-selected={current === i}
-                                aria-label={`Go to slide ${i + 1}`}
-                                onClick={() => goTo(i)}
-                            />
-                        ))}
-                    </div>
-                </div>
+              <img
+                className="engv-hero-img"
+                src={slide.image}
+                alt={slide.title}
+              />
+              <div className="engv-hero-scrim" />
+              <div className="engv-hero-content">
+                <article
+                  className="engv-card"
+                  style={{ backgroundColor: slide.color }}
+                >
+                  <h1 className="engv-title">{slide.title}</h1>
+                  <p className="engv-text">{slide.description}</p>
+                  <a href={slide.link} className="engv-cta">
+                    {slide.cta}
+                  </a>
+                </article>
+              </div>
             </div>
-        </section>
-    );
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </section>
+  );
 };
 
 export default EngineeringHero;

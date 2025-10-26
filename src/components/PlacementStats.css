@@ -1,0 +1,167 @@
+/* Wrapper */
+.placement-wrapper {
+  font-family: "Montserrat", sans-serif;
+  background-color: #ffffff;
+  color: #1a202c;
+}
+
+/* Hero Section */
+.placement-hero {
+  position: relative;
+  background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDUCCz8BmvK-a98IHb4yINYjnioJenqm2VcOe4FM6UMw1OTDsVieWYH5HFTgO51aVWosC3gWkRi0QwXBouqw_1_O00i-PjPdyM4BwDByqx-6VjvuW7HvDcYaZi9NoSwNpD3vtkquBmhoPKgcnbIcqf2ujlKwbg6VmnP3UnxNDApMzBB4APsJDGNI9oQie-o9x53FA1rSEZJNwM9dLKIMIu866zBUvw-6nn2eweTp7LWdMkInb17q30yEvkUXpWoaTFHerr3gCn-ZUtf");
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 5rem 1.5rem;
+}
+
+.placement-overlay {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.placement-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.placement-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.placement-divider {
+  width: 6rem;
+  height: 0.25rem;
+  background-color: #f56565;
+  margin: 0.75rem auto 3rem;
+}
+
+/* Stats Section */
+.placement-stats-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  justify-items: center;
+}
+
+@media (min-width: 768px) {
+  .placement-stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.placement-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.placement-number {
+  font-size: 3.5rem;
+  font-weight: 500;
+}
+
+.placement-label {
+  font-size: 1.25rem;
+  margin-top: 0.5rem;
+}
+
+/* Button */
+.placement-button-container {
+  margin-top: 3rem;
+}
+
+.placement-button {
+  display: inline-flex;
+  align-items: center;
+  background-color: #ffffff;
+  color: #333333;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease;
+}
+
+.placement-button:hover {
+  background-color: #f8f8f8;
+}
+
+.placement-icon {
+  margin-left: 0.5rem;
+}
+
+/* Recruiters Section */
+.recruiters-section {
+  background-color: #ffffff;
+  color: #1a202c;
+  padding: 5rem 1.5rem;
+  text-align: center;
+}
+
+.recruiters-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.recruiters-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.recruiters-divider {
+  width: 6rem;
+  height: 0.25rem;
+  background-color: #f56565;
+  margin: 0.75rem auto 3rem;
+}
+
+/* Recruiter Logos Grid */
+.recruiters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 2rem;
+}
+
+.recruiter-logo-box {
+  height: 6rem;
+  border: 2px solid #a0aec0;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.recruiter-logo-box:hover {
+  border-color: #f56565;
+  transform: translateY(-4px);
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  .placement-wrapper {
+    background-color: #1a202c;
+    color: #ffffff;
+  }
+
+  .placement-button {
+    background-color: #2d3748;
+    color: #ffffff;
+  }
+
+  .placement-button:hover {
+    background-color: #4a5568;
+  }
+
+  .recruiter-logo-box {
+    border-color: #4a5568;
+  }
+}

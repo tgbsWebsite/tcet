@@ -1,8 +1,8 @@
 /* Tokens */
 :root {
   --ns-primary: #f97316;
-  --ns-bg-light: #47495d;
-  --ns-bg-dark:  #47495d;
+  --ns-bg-light: #7e68c6;
+  --ns-bg-dark: #7e68c6;
   --ns-surface: #ffffff;
   --ns-text-on-surface: #111827;
   --ns-text-on-dark: #ffffff;
@@ -19,7 +19,9 @@
 }
 
 /* Optional dark mode */
-.dark .ns-section { background: var(--ns-bg-dark); }
+.dark .ns-section {
+  background: var(--ns-bg-dark);
+}
 
 /* Inner container */
 .ns-wrap {
@@ -46,7 +48,9 @@
 }
 
 /* Form row */
-.ns-form { margin-top: 28px; }
+.ns-form {
+  margin-top: 28px;
+}
 
 /* Full-width row; remove max-width cap */
 .ns-row {
@@ -55,37 +59,43 @@
   justify-content: center;
   gap: 16px;
   width: 75%;
-  max-width: none;            /* take full container width */
+  max-width: none; /* take full container width */
   margin-inline: auto;
 }
 
 /* Visually hidden label */
 .ns-visually-hidden {
   position: absolute !important;
-  width: 1px; height: 1px;
-  padding: 0; margin: -1px;
-  overflow: hidden; clip: rect(0 0 0 0);
-  white-space: nowrap; border: 0;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 /* Input */
 .ns-input {
   min-width: 0;
   flex: 1 1 100%;
-  width: 100%;                             /* fill row */
-  border: none;                            /* remove line */
+  width: 100%; /* fill row */
+  border: none; /* remove line */
   background: var(--ns-surface);
   color: var(--ns-text-on-surface);
-  border-radius: 0;                         /* square corners */
-  padding-inline: 14px;                     /* horizontal padding */
+  border-radius: 0; /* square corners */
+  padding-inline: 14px; /* horizontal padding */
   line-height: 1.5;
   font-size: 0.9375rem;
-  box-shadow: none;                         /* no inner shadow line */
+  box-shadow: none; /* no inner shadow line */
   outline: none;
   transition: outline-color 160ms ease;
 }
 
-.ns-input::placeholder { color: #6b7280; }
+.ns-input::placeholder {
+  color: #6b7280;
+}
 
 /* Clean, visible focus without inner line */
 .ns-input:focus {
@@ -97,7 +107,7 @@
 .ns-button {
   flex: 0 0 auto;
   border: none;
-  border-radius: 0;                         /* match input */
+  border-radius: 0; /* match input */
   background: var(--ns-primary);
   color: #ffffff;
   font-weight: 600;
@@ -105,11 +115,16 @@
   padding-inline: 14px;
   line-height: 1.25;
   cursor: pointer;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
-  transition: background-color 160ms ease, box-shadow 160ms ease, transform 80ms ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  transition: background-color 160ms ease, box-shadow 160ms ease,
+    transform 80ms ease;
 }
-.ns-button:hover { background: #ea580c; }
-.ns-button:active { transform: translateY(1px); }
+.ns-button:hover {
+  background: #ea580c;
+}
+.ns-button:active {
+  transform: translateY(1px);
+}
 .ns-button:focus-visible {
   outline: 2px solid var(--ns-primary);
   outline-offset: 2px;
@@ -118,8 +133,8 @@
 /* Shared control height so input and button match */
 .ns-input,
 .ns-button {
-  block-size: 44px;     /* exact same height */
-  padding-block: 0;     /* height is controlled by block-size */
+  block-size: 44px; /* exact same height */
+  padding-block: 0; /* height is controlled by block-size */
   display: inline-flex;
   align-items: center;
 }
@@ -131,5 +146,7 @@
     align-items: stretch;
     gap: 12px;
   }
-  .ns-button { width: 100%; }
+  .ns-button {
+    width: 100%;
+  }
 }

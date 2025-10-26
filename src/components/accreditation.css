@@ -1,31 +1,27 @@
 /* Wrapper */
 .acc-wrapper {
-  background-color: #D9D9D9;
+  background-color: #d9d9d9;
   min-height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
   /* padding: 1rem; */
-
 }
 
 /* Container */
 .acc-container {
   width: 100%;
   max-width: 1280px;
-  
-  margin: 0 auto;
 
+  margin: 0 auto;
 }
 .heading {
-    background-color: #ffffff;
-    margin-bottom: 0px !important;
-
+  background-color: #ffffff;
+  margin-bottom: 0px !important;
 }
 
 /* Grid Layout */
 .acc-grid {
-   
   display: grid;
   grid-template-columns: 1fr;
   /* gap: 2rem; */
@@ -210,7 +206,7 @@
   background-color: #334d80;
   color: #ffffff;
   text-align: center;
- padding: 3rem 3rem;
+  padding: 3rem 3rem;
   border-radius: 0.25rem;
   width: 100%;
 }
@@ -395,7 +391,6 @@
 .acc-diamond-text {
   color: #ffffff;
   font-size: 2rem;
-
 }
 
 .acc-diamond-label {
@@ -439,13 +434,232 @@
 
 /* NBA Logo - Fixed size */
 .acc-nba-image {
-  width: 300px;  /* Fixed width */
+  width: 300px; /* Fixed width */
   height: 250px; /* Fixed height */
   object-fit: contain;
 }
 
 .acc-naac-logo {
-     width: 300px;  /* Fixed width */
+  width: 300px; /* Fixed width */
   height: 200px; /* Fixed height */
   object-fit: contain;
+}
+
+/* ----- Extra Large Screens (>1600px) ----- */
+@media (min-width: 1600px) {
+  .acc-container {
+    max-width: 1800px;
+  }
+
+  .acc-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 3rem;
+  }
+
+  .acc-naac-title {
+    font-size: 3.5rem;
+  }
+
+  .acc-nba-title {
+    font-size: 3.25rem;
+  }
+
+  .acc-diamond {
+    width: 160px;
+    height: 160px;
+  }
+}
+
+/* ----- Large Desktops (1200px - 1599px) ----- */
+@media (max-width: 1599px) and (min-width: 1025px) {
+  .acc-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+
+  .acc-container {
+    padding: 2.5rem 3rem;
+  }
+
+  .acc-naac-title,
+  .acc-nba-title {
+    font-size: 3rem;
+  }
+
+  .acc-diamond {
+    width: 120px;
+    height: 120px;
+  }
+
+  .acc-diamond-text {
+    font-size: 1.75rem;
+  }
+}
+
+/* ----- Tablets / Laptops (769px - 1024px) ----- */
+@media (max-width: 1024px) {
+  .acc-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+
+  .acc-diamond {
+    width: 100px;
+    height: 100px;
+  }
+
+  .acc-diamond-text {
+    font-size: 1.4rem;
+  }
+
+  .acc-naac-title {
+    font-size: 2.5rem;
+  }
+
+  .acc-nba-title {
+    font-size: 2.3rem;
+  }
+
+  .acc-award-text,
+  .acc-nba-text,
+  .acc-ugc-text {
+    font-size: 1.1rem;
+  }
+
+  .acc-container {
+    padding: 2rem;
+  }
+}
+
+/* ----- Tablets (600px - 768px) ----- */
+@media (max-width: 768px) {
+  .acc-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .acc-nba-wrapper,
+  .acc-ugc-wrapper {
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+  }
+
+  .acc-diamond {
+    width: 90px;
+    height: 90px;
+  }
+
+  .acc-diamond-text {
+    font-size: 1.25rem;
+  }
+
+  .acc-award-content,
+  .acc-nba-box,
+  .acc-ugc-box {
+    padding: 2rem 1.5rem;
+  }
+
+  .acc-naac-title {
+    font-size: 2rem;
+  }
+
+  .acc-nba-title {
+    font-size: 2rem;
+  }
+
+  .acc-container {
+    padding: 1.5rem;
+  }
+}
+
+/* ----- Small Devices (480px - 599px) ----- */
+@media (max-width: 599px) {
+  .acc-wrapper {
+    padding: 1rem;
+    flex-direction: column;
+  }
+
+  .acc-container {
+    padding: 1rem;
+  }
+
+  .acc-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .acc-naac-title {
+    font-size: 1.75rem;
+  }
+
+  .acc-naac-logo,
+  .acc-nba-image {
+    width: 200px;
+    height: auto;
+  }
+
+  .acc-diamond {
+    width: 80px;
+    height: 80px;
+  }
+
+  .acc-diamond-text {
+    font-size: 1rem;
+  }
+
+  .acc-award-text,
+  .acc-ugc-text {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  .acc-award-content,
+  .acc-nba-box,
+  .acc-ugc-box {
+    padding: 1.5rem;
+  }
+}
+
+/* ----- Small Phones (<480px) ----- */
+@media (max-width: 480px) {
+  .acc-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .acc-container {
+    padding: 1rem;
+  }
+
+  .acc-naac-title {
+    font-size: 1.5rem;
+  }
+
+  .acc-nba-title {
+    font-size: 1.5rem;
+  }
+
+  .acc-diamond {
+    width: 70px;
+    height: 70px;
+  }
+
+  .acc-diamond-text {
+    font-size: 0.9rem;
+  }
+
+  .acc-award-content,
+  .acc-nba-box,
+  .acc-ugc-box {
+    padding: 1rem;
+  }
+
+  .acc-award-text,
+  .acc-ugc-text {
+    font-size: 0.9rem;
+  }
+
+  .acc-nba-text {
+    font-size: 0.85rem;
+  }
 }

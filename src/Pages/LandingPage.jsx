@@ -13,24 +13,23 @@ import WhyTcet from "../components/WhyTcet";
 import GlobalCollaborations from "../components/GlobalCollaborations";
 import Accreditation from "../components/Accreditation";
 
-
 export default function LandingPage() {
   return (
     <>
       <HeroTU />
-      <AboutProgrammesTU/>
-       {/* <SchoolsDesignReplica/> */}
-      <EngineeringHero/>
-      <SearchProgrammes/>
-      <CampusLifeCard/>
-     
-      <EventCalendar/>
-      <GlobalCollaborations/>
-      <Accreditation/>
+      <AboutProgrammesTU />
+      {/* <SchoolsDesignReplica/> */}
+      <EngineeringHero />
+      <SearchProgrammes />
+      <CampusLifeCard />
 
-      <TaglineHero/>
-      <NewsletterSubscribe/>
-      <UniversityFooter/>
+      <EventCalendar />
+      <GlobalCollaborations />
+      <Accreditation />
+
+      <TaglineHero />
+      <NewsletterSubscribe />
+      <UniversityFooter />
     </>
-  )
+  );
 }

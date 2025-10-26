@@ -3,13 +3,13 @@
 .uni-header {
   position: sticky;
   top: 0;
-background: linear-gradient(
+  background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.95) 0%,      /* Much darker at top */
-    rgba(0, 0, 0, 0.75) 40%,     /* Dark at 40% */
-    rgba(0, 0, 0, 0.35) 70%,     /* Medium at 70% */
-    transparent 100%              /* Completely transparent at bottom */
-);
+    rgba(0, 0, 0, 0.95) 0%,
+    /* Much darker at top */ rgba(0, 0, 0, 0.75) 40%,
+    /* Dark at 40% */ rgba(0, 0, 0, 0.35) 70%,
+    /* Medium at 70% */ transparent 100% /* Completely transparent at bottom */
+  );
 
   color: #1f2937;
   z-index: 1000;
@@ -17,7 +17,6 @@ background: linear-gradient(
   padding: 0.5rem 0;
   padding-bottom: 3rem; /* Extra padding to extend the fade */
 }
-
 
 /* Diagonal Lines Background Pattern */
 .uni-diagonal-bg {
@@ -161,7 +160,7 @@ background: linear-gradient(
 /* Apply Button */
 .uni-apply-btn {
   margin-left: 1rem;
-  background-color: #D92329;
+  background-color: #d92329;
   color: #ffffff;
   font-weight: 600;
   padding: 0.5rem 1.5rem;
@@ -177,7 +176,8 @@ background: linear-gradient(
 
 /* Bottom Navigation */
 .uni-nav-bottom {
-  display: flex;gap: 2rem
+  display: flex;
+  gap: 2rem;
 }
 
 .uni-nav-list-bottom {
@@ -238,7 +238,7 @@ background: linear-gradient(
 
 /* Material Icons */
 .material-icons {
-  font-family: 'Material Icons';
+  font-family: "Material Icons";
   font-size: 24px;
 }
 
@@ -249,13 +249,13 @@ background: linear-gradient(
   }
 
   .uni-nav-list {
-    gap: 0.75rem;
+    gap: 1.5rem;
     font-size: 0.8125rem;
   }
 
   .uni-nav-list-bottom {
-    gap: 0.75rem;
-    font-size: 0.9375rem;
+    gap: 1.5rem;
+    font-size: 17px;
   }
 }
 
@@ -375,7 +375,7 @@ background: linear-gradient(
 }
 /* Hamburger icon - increased size */
 .uni-hamburger-icon {
-  width: 32px;  /* Increased from 24px */
+  width: 32px; /* Increased from 24px */
   height: 32px; /* Increased from 24px */
   object-fit: contain;
 }

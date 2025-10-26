@@ -5,14 +5,16 @@
   color: #1f2121;
 }
 
-
-         .about-description-section 
+.about-description-section 
 
 /* Hero Section */
 .about-hero-section {
   width: 100%;
-  height: 16rem;
-  background-color: #9e9c9c;
+  height: 16rem; /* or desired height */
+  background-image: url("/WhatsApp Image 2025-10-25 at 5.30.27 PM.jpg"); /* image from public folder */
+  background-size: cover; /* cover entire container */
+  background-position: center; /* center the image */
+  background-repeat: no-repeat; /* no tiling */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,15 +25,14 @@
 } */
 
 .about-hero-title {
-    padding: 2.5rem;
-     height: 200px;
-    text-align: center;
+  padding: 2.5rem;
+  height: 200px;
+  text-align: center;
   font-size: 3.25rem;
   font-weight: 600;
   color: black;
-      background-color: #b3bdbd;
+  background-color: #b3bdbd;
 }
-
 
 /* Main Container */
 .about-main-container {
@@ -67,7 +68,6 @@
   margin-bottom: 1.5rem;
 }
 
-
 /* Description Section */
 .about-description-section {
   max-width: 75rem;
@@ -79,8 +79,6 @@
   text-align: justify;
   line-height: 1.7;
 }
-
-
 
 .about-description-section p {
   margin-bottom: 1.5rem;
@@ -122,8 +120,6 @@
   overflow: hidden;
   position: relative;
 }
-
-
 
 /* Different Grid Sizes matching the image layout */
 
@@ -170,7 +166,7 @@
     grid-column: span 2;
     grid-row: span 1;
   }
-  
+
   .gallery-item-large:nth-child(3) {
     grid-row: span 2;
   }
@@ -188,3 +184,5 @@
 .about-gallery-image:hover {
   transform: scale(1.05);
 }
+
+/* Assuming your cards have a class like .about-description-section or similar */
