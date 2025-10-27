@@ -22,7 +22,7 @@ export default function AboutProgrammesTU() {
             </h1>
             {/* <h2 className="about-subtitle">Sub Header</h2> */}
             <p className="about-description">
-              Thakur College of Engineering & Technology (TCET) is an autonomous and linguistic minority Institute. It was established in AY 2001-02 with a clear objective of providing quality technical education in tune with international standards and contemporary global requirements. TCET offers 21 U.G., 11 PG., and 5 Ph.D. (Tech.) Courses. TCET is an ISO 9001:2015, ISO 14001:2015 & ISO 50001:2018 certified and certification has helped Institute to develop a student centric process driven system required for quality education in the 21st century.
+             TCET is an autonomous and linguistic minority Institute. It was established in AY 2001-02 with a clear objective of providing quality technical education in tune with international standards and contemporary global requirements. TCET offers 21 U.G., 11 PG., and 5 Ph.D. (Tech.) Courses. TCET is an ISO 9001:2015, ISO 14001:2015 & ISO 50001:2018 certified and certification has helped Institute to develop a student centric process driven system required for quality education in the 21st century.
             </p>
           </div>
 
@@ -42,7 +42,7 @@ export default function AboutProgrammesTU() {
             <div className="vm-section">
               <h2 className="vm-heading">Our Vision</h2>
               <p className="vm-text">
-                Thakur College of Engineering and Technology will excel in Technical, Professional and Research Education to become an internationally renowned multidisciplinary premier institute of engineering, technology, computer application, management studies and allied professional education.
+               TCET will excel in Technical, Professional and Research Education to become an internationally renowned multidisciplinary premier institute of engineering, technology, computer application, management studies and allied professional education.
               </p>
             </div>
 

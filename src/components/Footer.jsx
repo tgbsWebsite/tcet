@@ -73,7 +73,7 @@ export default function UniversityFooter() {
         <div className="uf-bottom">
           <div className="uf-address">
             <h4 className="uf-address-title">
-              Thakur College Of Engineering And Technology(Deemed to be University)
+              TCET Deemed to be University
             </h4>
             <p className="uf-address-text">
               A-Block, Thakur Educational Campus,
