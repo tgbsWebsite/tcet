@@ -73,7 +73,7 @@ export default function UniversityFooter() {
         <div className="uf-bottom">
           <div className="uf-address">
             <h4 className="uf-address-title">
-              Thakur College Of Engineering And Technology
+              Thakur College Of Engineering And Technology(Deemed to be University)
             </h4>
             <p className="uf-address-text">
               A-Block, Thakur Educational Campus,
@@ -87,8 +87,8 @@ export default function UniversityFooter() {
             </p>
             <p className="uf-address-text">
               E-Mail:{" "}
-              <a className="uf-link" href="mailto:tcet@thakureducation.or">
-                tcet@thakureducation.or
+              <a className="uf-link" href="mailto:tcet@thakureducation.org">
+                tcet@thakureducation.org
               </a>
             </p>
             <p className="uf-address-text">
@@ -157,7 +157,7 @@ export default function UniversityFooter() {
       </div>
 
       <div className="uf-copy">
-       |Copyright © 2025 | TCET University (Deemed to be University) | All rights reserved |(An University under Zagdusingh Charitable Trust )
+       |Copyright © 2025 | TCET University (Deemed to be University)  |(An University under Zagdusingh Charitable Trust )
           
       </div>
     </footer>
