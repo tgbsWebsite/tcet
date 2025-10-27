@@ -1,0 +1,284 @@
+/* Root and layout */
+.ec-root {
+
+  background-color: #fff;
+  padding-bottom: 60px;
+}
+.ec-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.ec-title {
+  font-size: 36px;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.ec-titleLine {
+  width: 60px;
+  height: 4px;
+  background-color: #ff6b35;
+  margin: 0 auto;
+}
+.ec-main {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  max-width: 1200px;     /* restore a cap or set a width */
+  width: 100%;           /* let it shrink on small screens */
+  margin-left: auto;     /* center horizontally */
+  margin-right: auto;
+  padding-inline: 20px;  /* optional gutters */
+}
+
+
+/* Calendar section */
+.ec-calendarSection {
+  flex: 1;
+  /* max-width: 400px; */
+  width: 100%;
+}
+.ec-calendar {
+  background-color: #fff;
+  padding: 20px;
+  height: 525px;
+  position: relative;
+  width: 100%;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  border: 1px solid #e5e5e5;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden; /* avoids bleeding if rounding issues */
+}
+
+.ec-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 0 5px;
+}
+.ec-navBtn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 8px;
+  color: #666;
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ec-navBtn:hover {
+  background-color: #f5f5f5;
+  color: #333;
+}
+.ec-monthYear {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+.ec-gridTitle {
+  display: none;
+}
+.ec-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-auto-rows: 1fr;      /* each week row gets equal height */
+  gap: 5px;
+  width: 100%;
+  flex: 1 1 auto;           /* fill remaining height */
+  min-height: 0;            /* allow shrinking in flex container */
+}
+.ec-dayHeader {
+  padding: 21px 0;
+  font-weight: 500;
+  color: #888;
+  font-size: 12px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Day cells */
+.ec-day {
+  aspect-ratio: 1;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  /* border-radius: 50%; */
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 36px;
+  font-weight: 400;
+  margin: 1px;
+}
+.ec-day:hover:not(.ec-day--other) {
+  background-color: #f8f9fa;
+  color: black;
+}
+.ec-day--hasEvent {
+  background-color: #ff6b35;
+  color: #fff;
+  font-weight: 500;
+
+}
+.ec-day--hasEvent:hover {
+  background-color: #e55a2b;
+}
+.ec-day--selected {
+  /* background-color: #007bff; */
+  color: black;
+  font-weight: 500;
+  background-color: #f8f9fa;
+}
+.ec-day--other {
+  color: #ccc;
+  cursor: default;
+}
+.ec-day--today {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: 500;
+}
+.ec-day--today.ec-day--hasEvent {
+  background-color: #ff6b35;
+}
+
+/* Event section */
+.ec-eventSection {
+  flex: 1;
+  max-width: 533px;
+}
+
+.ec-eventCard {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  
+}
+.ec-eventDateTab {
+  background-color: #ff6b35;
+  color: white;
+  padding: 8px 16px;
+  font-weight: 600;
+  font-size: 14px;
+  display: inline-block;
+  border-radius: 0 0 8px 0;
+}
+.ec-eventImage {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+  
+}
+.ec-eventDetails {
+  padding: 20px;
+}
+.ec-eventName {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.ec-eventDescription {
+  color: #666;
+  line-height: 1.5;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .ec-main {
+    flex-direction: column;
+  }
+  .ec-calendarSection,
+  .ec-eventSection {
+    max-width: 100%;
+  }
+}
+
+/* Card shell */
+.ec-card {
+  /* border-radius: 12px; */
+  background: #fff;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.06);
+  overflow: hidden; /* ensures image corners clip with radius */
+}
+
+/* Media block with overlay badge */
+.ec-cardMedia {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;   /* or 4 / 3, 3 / 2 etc. */
+  overflow: hidden;
+}
+
+/* Image stays top-anchored and fills container */
+.ec-cardImg, .ec-eventImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+}
+
+.ec-cardImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;   /* show from top as requested */
+  display: block;
+}
+.ec-cardBadge {
+  position: absolute;
+  top: 0;              /* stick to top edge */
+  left: 0;             /* stick to left edge */
+  background: #F36C24;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1;
+  padding: 10px 14px;  /* inner spacing inside the badge */
+  border-radius: 0 0 6px 0; /* squared top-left, rounded inner corners */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+  z-index: 1;          /* ensure it stays above the image */
+  inset: 0 auto auto 0;
+}
+/* Body */
+.ec-cardBody {
+  padding: 16px 18px 20px;
+}
+.ec-cardTitle {
+  margin: 0 0 8px;
+  font-size: 18px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  color: #1a1a1a;
+  text-transform: uppercase;
+}
+.ec-cardText {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.55;
+  color: #555;
+}
+
+/* Optional hover lift */
+.ec-card:hover {
+  box-shadow: 0 10px 28px rgba(0,0,0,0.12), 0 4px 12px rgba(0,0,0,0.08);
+  transform: translateY(-1px);
+  transition: box-shadow 160ms ease, transform 160ms ease;
+}

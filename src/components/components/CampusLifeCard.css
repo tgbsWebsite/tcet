@@ -1,0 +1,163 @@
+/* Typography: Poppins fallback if Google Fonts link is present in HTML.
+   Alternatively: import "@fontsource/poppins"; in JS bundlers. */
+:root {
+  --cl-primary: #f26d21;
+  --cl-bg-light: #ffff;
+  --cl-bg-dark: #121212;
+  --cl-text-light: #111827;
+  --cl-text-dark: #f3f4f6;
+
+  --cl-radius: 8px;
+  --cl-shadow: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+}
+
+/* Page wrapper (Tailwind: bg-background-light dark:bg-background-dark font-display flex items-center justify-center min-h-screen p-4)
+   Full-bleed across viewport */
+.cl-page {
+  background-color: var(--cl-bg-light);
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  width: 100%;                                
+  margin-left: calc(50% - 50vw);               
+  margin-right: calc(50% - 50vw);
+  padding-inline: clamp(32px, 8vw, 96px);  /* left/right only */
+  padding-top: 0;                           /* no top padding */
+  padding-bottom: 0;                        /* keep bottom at 0 as well */
+}
+
+
+/* Card container (full width) */
+.cl-card {
+  /* max-width: 72rem;  remove or comment this */
+  max-width: none;        /* ensure no upper bound */
+  width: 100%;            /* fill available width */
+  background-color: #ffffff;
+  /* border-radius: var(--cl-radius); */
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+    display: flex;
+  gap: 24px;  
+}
+
+.dark .cl-card {
+  background-color: #27272a; /* zinc-800 */
+}
+
+/* Media section: cap height to reduce overall card height */
+.cl-media {
+  width: 100%;
+  max-height: 360px;      /* reduce card height; adjust to taste */
+  overflow: hidden;       /* crop overflowed image */
+}
+
+@media (max-width: 767px) {
+  .cl-media { max-height: 40vh; }  /* tighter on small screens */
+}
+
+@media (min-width: 768px) {
+  .cl-card { flex-direction: row; 
+      gap: 42px;               /* horizontal gap between image and content */
+}
+  .cl-media {
+    width: 50%;
+    max-height: 50vh;     /* allow a bit more on larger screens */
+  }
+}
+
+/* Image (cover and crop to the media box) */
+.cl-media-img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0%;      /* crop to container without distortion */
+}
+
+/* Content section */
+.cl-content {
+  width: 100%;
+  /* padding: 48px;    */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .cl-content { width: 50%; }
+}
+
+/* Title */
+.cl-title {
+  font-size: 2.25rem;     /* 36px */
+  line-height: 2.5rem;    /* 40px */
+  font-weight: 700;
+  color: #1f2937;         /* gray-800 */
+  margin: 0;
+}
+
+.dark .cl-title { color: #ffffff; }
+
+/* Underline */
+.cl-title-underline {
+  width: 4rem;
+  height: 4px;
+  background-color: var(--cl-primary);
+  margin: 16px auto 24px auto; /* auto left/right centers it */
+  border-radius: 9999px;
+  display: block;              /* ensure it honors auto margins */
+}
+
+
+/* Description */
+.cl-description {
+  color: #4b5563;           /* gray-600 */
+  line-height: 1.7;
+  text-align: left;
+  margin: 0 clamp(28px, 6vw, 96px) 28px clamp(28px, 6vw, 96px);
+  max-width: 56ch; 
+  font-size: 1.2em;         /* optional: comfortable line length */
+}
+
+.dark .cl-description { color: #d1d5db; }
+
+/* CTA button */
+.cl-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;              /* increased space between text and icon */
+  color: var(--cl-primary);
+  /* border: 1px solid var(--cl-primary); */
+  border-radius: var(--cl-radius);
+  padding: 8px 24px;      /* py-2 px-6 */
+  text-decoration: none;
+  width: -moz-fit-content;
+  width: fit-content;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.cl-cta:hover {
+  background-color: var(--cl-primary);
+  color: #ffffff;
+  border-color: var(--cl-primary);
+}
+
+/* If using an image icon (PNG/SVG), size it here */
+.cl-cta-icon {
+  display: inline-block;  /* for img icons */
+  width: 20px;
+  height: 20px;
+  line-height: 1;
+  object-fit: contain;
+}
+
+/* Optional: improve focus visibility */
+.cl-cta:focus {
+  outline: 2px solid var(--cl-primary);
+  outline-offset: 2px;
+}

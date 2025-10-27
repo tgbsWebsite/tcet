@@ -1,0 +1,222 @@
+/* Unique prefix: tu- for hero */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.tu-hero {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+}
+
+.tu-hero-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.tu-play-btn {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, background 0.3s ease;
+  animation: tu-float 6s ease-in-out infinite;
+  position: relative;
+}
+
+.tu-play-btn::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 20px solid #fff;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+  margin-left: 5px;
+}
+
+.tu-play-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.1);
+}
+
+.tu-video-text {
+  font-size: 16px;
+  margin-bottom: 30px;
+  opacity: 0.9;
+}
+
+.tu-tagline {
+  font-size: 55px;
+
+  font-weight: 700;
+  color: white;
+  text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.8);
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .tu-tagline {
+    font-size: 3.5rem;
+    letter-spacing: 6px;
+  }
+  .tu-play-btn {
+    width: 70px;
+    height: 70px;
+  }
+  .tu-play-btn::after {
+    border-left: 18px solid #fff;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .tu-hero {
+    background-attachment: scroll;
+  }
+  .tu-tagline {
+    font-size: 2.8rem;
+    letter-spacing: 4px;
+    margin-bottom: 30px;
+  }
+  .tu-hero-content {
+    padding: 0 15px;
+  }
+  .tu-video-text {
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
+  .tu-play-btn {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+  }
+  .tu-play-btn::after {
+    border-left: 15px solid #fff;
+    border-top: 9px solid transparent;
+    border-bottom: 9px solid transparent;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .tu-tagline {
+    font-size: 2.2rem;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+  }
+  .tu-hero-content {
+    padding: 0 10px;
+  }
+  .tu-video-text {
+    font-size: 13px;
+    margin-bottom: 20px;
+  }
+  .tu-play-btn {
+    width: 50px;
+    height: 50px;
+  }
+  .tu-play-btn::after {
+    border-left: 12px solid #fff;
+    border-top: 7px solid transparent;
+    border-bottom: 7px solid transparent;
+  }
+}
+
+/* Landscape mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .tu-hero {
+    height: 100vh;
+  }
+  .tu-tagline {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+  }
+  .tu-video-text {
+    margin-bottom: 15px;
+    font-size: 13px;
+  }
+  .tu-play-btn {
+    margin-bottom: 10px;
+  }
+}
+
+/* Animation */
+@keyframes tu-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.tu-hero {
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  overflow: hidden;
+}
+
+.tu-hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.tu-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.tu-hero > *:not(.tu-hero-video) {
+  position: relative;
+  z-index: 2;
+}
+
+.tu-tagline {
+  font-size: 55px;
+  font-weight: 700;
+  color: #f6bb3f;
+  text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.8);
+  margin-top: 30rem; /* space above to create separation */
+  /* or if absolutely positioned, unset top and position at bottom */
+  position: relative; /* ensure in normal flow */
+}

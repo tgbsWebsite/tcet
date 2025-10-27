@@ -1,0 +1,381 @@
+/* Header Container */
+/* Header Container - Sticky */
+.uni-header {
+  position: sticky;
+  top: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.95) 0%,
+    /* Much darker at top */ rgba(0, 0, 0, 0.75) 40%,
+    /* Dark at 40% */ rgba(0, 0, 0, 0.35) 70%,
+    /* Medium at 70% */ transparent 100% /* Completely transparent at bottom */
+  );
+
+  color: #1f2937;
+  z-index: 1000;
+  min-height: 120px;
+  padding: 0.5rem 0;
+  padding-bottom: 3rem; /* Extra padding to extend the fade */
+}
+
+/* Diagonal Lines Background Pattern */
+.uni-diagonal-bg {
+  background-image: linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.03) 25%,
+    transparent 25%,
+    transparent 50%,
+    rgba(0, 0, 0, 0.03) 50%,
+    rgba(0, 0, 0, 0.03) 75%,
+    transparent 75%,
+    transparent
+  );
+  background-size: 20px 20px;
+}
+
+/* Container */
+.uni-container {
+  max-width: 1536px;
+  margin: 0 auto;
+  /* padding: 0 2rem; */
+}
+
+/* Header Content Wrapper */
+.uni-header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+/* Logo Section */
+.uni-logo-section {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.uni-logo-img {
+  height: 5.5rem;
+  width: auto;
+  object-fit: contain;
+}
+
+.uni-title-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.uni-founder-name {
+  font-size: 0.75rem;
+  color: #4b5563;
+  margin: 0;
+}
+
+.uni-main-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #111827;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.uni-subtitle-text {
+  font-weight: 400;
+  color: #4b5563;
+}
+
+.uni-tagline {
+  font-size: 0.75rem;
+  color: #4b5563;
+  letter-spacing: 0.1em;
+  margin: 0;
+}
+
+/* Navigation Section */
+.uni-nav-section {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+/* Since Badge */
+.uni-since-badge {
+  position: relative;
+  top: -2rem;
+}
+
+.uni-since-text {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Navigation Wrapper */
+.uni-nav-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.75rem;
+}
+
+/* Top Navigation */
+.uni-nav-top {
+  display: flex;
+}
+
+.uni-nav-list {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-size: 1rem;
+  color: #4b5563;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: nowrap;
+}
+
+.uni-nav-list li {
+  white-space: nowrap;
+}
+
+.uni-nav-link {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  font-weight: 500;
+  font-size: 17px;
+}
+
+.uni-nav-link:hover {
+  color: #3b82f6;
+}
+
+.uni-nav-divider {
+  color: #aab4c3;
+}
+
+/* Apply Button */
+.uni-apply-btn {
+  margin-left: 1rem;
+  background-color: #d92329;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 0.5rem 1.5rem;
+  border-radius: 99px;
+  text-decoration: none;
+  display: inline-block;
+  transition: opacity 0.3s ease;
+}
+
+.uni-apply-btn:hover {
+  opacity: 0.9;
+}
+
+/* Bottom Navigation */
+.uni-nav-bottom {
+  display: flex;
+  gap: 2rem;
+}
+
+.uni-nav-list-bottom {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-weight: 500;
+  font-size: 17px;
+  color: #374151;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: nowrap;
+}
+
+.uni-nav-list-bottom li {
+  white-space: nowrap;
+}
+
+.uni-nav-link-bottom {
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.uni-nav-link-bottom:hover {
+  color: #3b82f6;
+}
+
+/* Hamburger Menu */
+.uni-menu-toggle {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.uni-hamburger-btn {
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  color: #4b5563;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.uni-hamburger-btn:hover {
+  background-color: #e5e7eb;
+}
+
+.uni-hamburger-btn:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Material Icons */
+.material-icons {
+  font-family: "Material Icons";
+  font-size: 24px;
+}
+
+/* Responsive Design */
+@media (max-width: 1536px) {
+  .uni-container {
+    padding: 0 1.5rem;
+  }
+
+  .uni-nav-list {
+    gap: 1.5rem;
+    font-size: 0.8125rem;
+  }
+
+  .uni-nav-list-bottom {
+    gap: 1.5rem;
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .uni-logo-img {
+    height: 3.5rem;
+  }
+
+  .uni-main-title {
+    font-size: 1.125rem;
+  }
+
+  .uni-nav-list {
+    gap: 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  .uni-nav-list-bottom {
+    gap: 0.5rem;
+    font-size: 0.875rem;
+  }
+
+  .uni-apply-btn {
+    padding: 0.4rem 1.25rem;
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .uni-header-content {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0.75rem 0;
+  }
+
+  .uni-logo-section {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .uni-nav-section {
+    width: 100%;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .uni-since-badge {
+    top: 0;
+  }
+
+  .uni-nav-wrapper {
+    align-items: center;
+    width: 100%;
+  }
+
+  .uni-nav-list,
+  .uni-nav-list-bottom {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .uni-container {
+    padding: 0 1rem;
+  }
+
+  .uni-logo-img {
+    height: 3rem;
+  }
+
+  .uni-main-title {
+    font-size: 1rem;
+  }
+
+  .uni-founder-name,
+  .uni-tagline {
+    font-size: 0.625rem;
+  }
+
+  .uni-nav-list,
+  .uni-nav-list-bottom {
+    display: none;
+  }
+
+  .uni-hamburger-btn {
+    display: flex;
+  }
+}
+/* Hamburger Menu */
+.uni-menu-toggle {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.uni-hamburger-btn {
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  color: #4b5563;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.uni-hamburger-btn:hover {
+  background-color: #e5e7eb;
+}
+
+.uni-hamburger-btn:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+/* Hamburger icon - increased size */
+.uni-hamburger-icon {
+  width: 32px; /* Increased from 24px */
+  height: 32px; /* Increased from 24px */
+  object-fit: contain;
+}
