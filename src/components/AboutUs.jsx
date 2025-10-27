@@ -2,12 +2,12 @@ import "./aboutProgrammes.tu.css";
 
 export default function AboutProgrammesTU() {
   const stats = [
-    { number: "0+", label: "Schools", color: "about-color-orange" },
-    { number: "5311+", label: "Students on Campus", color: "about-color-blue" },
-    { number: "200+", label: "Faculty", color: "about-color-green" },
-    { number: "2764+", label: "Yearly Intake", color: "about-color-purple" },
-    { number: "0+", label: "Strength", color: "about-color-red" },
-    { number: "37+", label: "Courses", color: "about-color-yellow" },
+    { number: "5+", label: "Schools", color: "about-color-orange" },
+    { number: "37+", label: "Courses", color: "about-color-blue" },
+    { number: "2700+", label: "Yearly Intake", color: "about-color-green" },
+    { number: "5200+", label: "Students on Campus", color: "about-color-purple" },
+    { number: "300+", label: "Faculty", color: "about-color-red" },
+    { number: "40LPA+", label: "CTC", color: "about-color-yellow" },
   ];
 
   return (
@@ -18,9 +18,9 @@ export default function AboutProgrammesTU() {
           {/* Text Section */}
           <div className="about-text-section">
             <h1 className="about-main-title">
-              About TCET-University (Proposed)
+              About TCET <br/> Deemed to be University
             </h1>
-            <h2 className="about-subtitle">Sub Header</h2>
+            {/* <h2 className="about-subtitle">Sub Header</h2> */}
             <p className="about-description">
               Thakur College of Engineering & Technology (TCET) is an autonomous and linguistic minority Institute. It was established in AY 2001-02 with a clear objective of providing quality technical education in tune with international standards and contemporary global requirements. TCET offers 21 U.G., 11 PG., and 5 Ph.D. (Tech.) Courses. TCET is an ISO 9001:2015, ISO 14001:2015 & ISO 50001:2018 certified and certification has helped Institute to develop a student centric process driven system required for quality education in the 21st century.
             </p>

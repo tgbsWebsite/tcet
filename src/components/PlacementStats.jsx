@@ -2,6 +2,20 @@ import React from "react";
 import "./PlacementStats.css";
 
 export default function PlacementStats() {
+  // Array of company logos
+  const recruiterLogos = [
+    { id: 1, src: "/Placements/1.webp", alt: "Cymetrix" },
+    { id: 2, src: "/Placements/2.webp", alt: "Cognizant" },
+    { id: 3, src: "/Placements/3.webp", alt: "CDI" },
+    { id: 4, src: "/Placements/4.webp", alt: "Valuefy" },
+    { id: 5, src: "/Placements/5.webp", alt: "Marketplace Technologies" },
+    { id: 6, src: "/Placements/6.webp", alt: "NSE" },
+    { id: 7, src: "/Placements/7.webp", alt: "Asian Paints" },
+    { id: 8, src: "/Placements/22.webp", alt: "Accenture" },
+    { id: 9, src: "/Placements/9.webp", alt: "Infosys" },
+    { id: 10, src: "/Placements/10.webp", alt: "Webdev" },
+  ];
+
   return (
     <div className="placement-wrapper">
       {/* Placement Stats Section */}
@@ -54,8 +68,15 @@ export default function PlacementStats() {
           </header>
 
           <div className="recruiters-grid">
-            {Array.from({ length: 10 }).map((_, index) => (
-              <div key={index} className="recruiter-logo-box"></div>
+            {recruiterLogos.map((logo) => (
+              <div key={logo.id} className="recruiter-logo-box">
+                <img
+                  src={logo.src}
+                  alt={logo.alt}
+                  className="recruiter-logo-img"
+                  loading="lazy"
+                />
+              </div>
             ))}
           </div>
         </div>

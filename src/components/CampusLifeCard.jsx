@@ -17,9 +17,7 @@ export default function CampusLifeCard() {
           <h2 className="tuap-about-title">Campus Life</h2>
           <div className="cl-title-underline" />
           <p className="cl-description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non
-            facilisis diam. Fusce eu nisi porttitor, iaculis nulla sed, sodales
-            arcu. Proin maximus sapien ac dui ornare mattis
+            The campus features modern infrastructure that supports an engaging environment for teaching, learning, and research, reflecting the standards of a truly world-class institute. It also offers state-of-the-art facilities and comfortable hostels for outstation students.
           </p>
 
           <button className="spg-wrap spg-button" href="#">

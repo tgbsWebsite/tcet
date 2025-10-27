@@ -1,4 +1,10 @@
-/* Wrapper */
+body {
+  background: #ffffff;
+  color: #1a202c;
+  margin: 0;
+  padding: 0;
+}
+
 .placement-wrapper {
   font-family: "Montserrat", sans-serif;
   background-color: #ffffff;
@@ -8,11 +14,12 @@
 /* Hero Section */
 .placement-hero {
   position: relative;
-  background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDUCCz8BmvK-a98IHb4yINYjnioJenqm2VcOe4FM6UMw1OTDsVieWYH5HFTgO51aVWosC3gWkRi0QwXBouqw_1_O00i-PjPdyM4BwDByqx-6VjvuW7HvDcYaZi9NoSwNpD3vtkquBmhoPKgcnbIcqf2ujlKwbg6VmnP3UnxNDApMzBB4APsJDGNI9oQie-o9x53FA1rSEZJNwM9dLKIMIu866zBUvw-6nn2eweTp7LWdMkInb17q30yEvkUXpWoaTFHerr3gCn-ZUtf");
+  background-image: url("/connecting-people-with-technology.jpg");
   background-size: cover;
   background-position: center;
   color: white;
   padding: 5rem 1.5rem;
+  background-color: #ffffff;
 }
 
 .placement-overlay {
@@ -32,12 +39,16 @@
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
+  color: #ffffff;
 }
 
-.placement-divider {
+/* Divider */
+.cl-title-underline,
+.placement-divider,
+.recruiters-divider {
   width: 6rem;
   height: 0.25rem;
-  background-color: #f56565;
+  background-color: #ff6b35;
   margin: 0.75rem auto 3rem;
 }
 
@@ -64,11 +75,13 @@
 .placement-number {
   font-size: 3.5rem;
   font-weight: 500;
+  color: #ffffff;
 }
 
 .placement-label {
   font-size: 1.25rem;
   margin-top: 0.5rem;
+  color: #ffffff;
 }
 
 /* Button */
@@ -76,7 +89,8 @@
   margin-top: 3rem;
 }
 
-.placement-button {
+.placement-button,
+.spg-button {
   display: inline-flex;
   align-items: center;
   background-color: #ffffff;
@@ -86,18 +100,24 @@
   border-radius: 0.5rem;
   text-decoration: none;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
 }
 
-.placement-button:hover {
+.placement-button:hover,
+.spg-button:hover {
   background-color: #f8f8f8;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-.placement-icon {
+.placement-icon,
+.spg-icon {
   margin-left: 0.5rem;
 }
 
-/* Recruiters Section */
+/* Recruiters Section - WHITE BACKGROUND */
 .recruiters-section {
   background-color: #ffffff;
   color: #1a202c;
@@ -110,58 +130,106 @@
   margin: 0 auto;
 }
 
-.recruiters-title {
+.wtc-header {
+  margin-bottom: 3rem;
+}
+
+.tuap-about-title {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
+  color: #1a202c;
 }
 
-.recruiters-divider {
-  width: 6rem;
-  height: 0.25rem;
-  background-color: #f56565;
-  margin: 0.75rem auto 3rem;
-}
-
-/* Recruiter Logos Grid */
+/* Recruiters Grid - Clean White Style */
 .recruiters-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 2rem;
+  padding: 2rem 0;
 }
 
+/* Logo Boxes - Minimal White Style */
 .recruiter-logo-box {
-  height: 6rem;
-  border: 2px solid #a0aec0;
+  height: 7rem;
+  border: 1px solid #e2e8f0;
   border-radius: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: border-color 0.3s ease, transform 0.3s ease;
+  padding: 1.5rem;
+  background: #ffffff;
+  transition: all 0.3s ease;
+  box-shadow: none;
 }
 
 .recruiter-logo-box:hover {
-  border-color: #f56565;
-  transform: translateY(-4px);
+  border-color: #ff6b35;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-/* Dark Mode */
-@media (prefers-color-scheme: dark) {
-  .placement-wrapper {
-    background-color: #1a202c;
-    color: #ffffff;
+/* Logo Images */
+.recruiter-logo-img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.recruiter-logo-box:hover .recruiter-logo-img {
+  transform: scale(1.03);
+}
+
+/* Responsive Grid */
+@media (min-width: 640px) {
+  .recruiters-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 768px) {
+  .recruiters-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .recruiters-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media (min-width: 1280px) {
+  .recruiters-grid {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .placement-title,
+  .tuap-about-title {
+    font-size: 1.75rem;
   }
 
-  .placement-button {
-    background-color: #2d3748;
-    color: #ffffff;
+  .placement-number {
+    font-size: 2.5rem;
   }
 
-  .placement-button:hover {
-    background-color: #4a5568;
+  .placement-label {
+    font-size: 1rem;
+  }
+
+  .recruiters-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
   }
 
   .recruiter-logo-box {
-    border-color: #4a5568;
+    height: 6rem;
+    padding: 1rem;
   }
 }

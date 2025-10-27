@@ -10,7 +10,7 @@ const carouselData = [
   {
     title: "Under Grad",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.",
+      "Our undergraduate programs foster creativity, critical thinking, and practical learning, preparing students to excel and become confident professionals in their chosen fields.",
     cta: "Explore >>",
     color: "#F6BB3F",
     image: "/programming-technical-school.jpg",
@@ -19,16 +19,16 @@ const carouselData = [
   {
     title: "Post Grad",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.",
+      "Our postgraduate programs deepen intellectual understanding, inspire innovative research, and develop the expertise needed to make lasting contributions to academia, industry, and society.",
     cta: "Explore >>",
     color: "#D92329",
-    image: "/connecting-people-with-technology.jpg",
+    image: "/educated-student-classroom.jpg",
     link: "#",
   },
   {
     title: "Ph.D",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna.",
+      "Our doctoral programs foster original research, advanced analytical thinking, and academic excellence, empowering scholars to expand the frontiers of knowledge and innovation.",
     cta: "Explore >>",
     color: "#FF6B17",
     image: "/WhatsApp Image 2025-10-25 at 5.26.34 PM.jpeg",

@@ -1,665 +1,232 @@
-/* Wrapper */
-.acc-wrapper {
-  background-color: #d9d9d9;
-  min-height: 90vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* padding: 1rem; */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Container */
-.acc-container {
-  width: 100%;
-  max-width: 1280px;
+body {
+  background: #d8d8d8;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+}
 
+/* Main page wrapper */
+.acc-page {
+  background: #d8d8d8;
+  min-height: 100vh;
+  padding: 2.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header - Outside the box */
+.acc-page-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.acc-page-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #2d2d2d;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.5px;
+}
+
+.acc-title-underline {
+  width: 80px;
+  height: 4px;
+  background: #ff6347;
   margin: 0 auto;
 }
-.heading {
-  background-color: #ffffff;
-  margin-bottom: 0px !important;
+
+/* Content wrapper - Contains all rows */
+.acc-content-wrapper {
+  width: 100%;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
 }
 
-/* Grid Layout */
-.acc-grid {
+/* Each row - Default layout */
+.acc-row {
   display: grid;
-  grid-template-columns: 1fr;
-  /* gap: 2rem; */
+  grid-template-columns: 180px 1fr;
+  gap: 1.5rem;
+  align-items: center;
+  width: 100%;
+}
+
+/* Row 2 specifically - Text box stretches, logo on right */
+.acc-row:nth-child(2) {
+  display: grid;
+  grid-template-columns: 1fr 180px;
+  gap: 1.5rem;
   align-items: center;
 }
 
-/* NAAC Section */
-.acc-naac-section {
+/* Logo box */
+.acc-logo-box {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0.5rem;
 }
 
-.acc-naac-content {
-  text-align: center;
+.acc-logo-img {
+  width: 100%;
+  height: auto;
+  max-width: 170px;
+  object-fit: contain;
+  display: block;
 }
 
-.acc-label {
-  font-size: 1.125rem;
-  color: #6b7280;
-  margin-bottom: 0.5rem;
-}
-
-.acc-naac-grade {
-  display: flex;
-  align-items: flex-end;
-  gap: 0.5rem;
-  justify-content: center;
-}
-
-.acc-naac-text {
-  display: flex;
-  flex-direction: column;
-}
-
-.acc-naac-title {
-  font-size: 3rem;
-  font-weight: 700;
-  color: #334d80;
-  line-height: 1;
-  margin: 0;
-}
-
-.acc-grade-text {
-  font-size: 1.875rem;
-  font-weight: 500;
-  color: #334d80;
-  margin: -0.5rem 0 0 0;
-  line-height: 1;
-}
-
-.acc-grade-letter {
-  font-size: 6rem;
-  font-weight: 700;
-  color: #334d80;
-  line-height: 1;
-  margin-left: -0.25rem;
-}
-
-/* Award Box */
-.acc-award-box {
-  grid-column: span 1;
-}
-
-.acc-award-content {
-  background-color: #334d80;
+/* Info/Text box */
+.acc-info-box {
+  background: #3b5998;
   color: #ffffff;
-  text-align: center;
   padding: 1rem 1.5rem;
-  border-radius: 0.25rem;
-}
-
-.acc-award-text {
-  font-size: 1.125rem;
-  font-weight: 500;
-  margin: 0;
-}
-
-/* NBA Section */
-.acc-nba-section {
-  grid-column: span 1;
-}
-
-.acc-nba-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 4rem;
-}
-
-.acc-nba-box {
-  background-color: #334d80;
-  color: #ffffff;
-  text-align: center;
-  padding: 3rem 3rem;
-  /* border-radius: 0.25rem; */
-  width: 100%;
-}
-
-.acc-nba-text {
-  font-size: 1.125rem;
-  font-weight: 500;
-  margin: 0;
-}
-
-.acc-nba-logo {
-  text-align: center;
-  color: #334d80;
-  flex-shrink: 0;
-}
-
-.acc-nba-title {
-  font-size: 3rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  margin: 0;
-  line-height: 1;
-}
-
-.acc-nba-subtitle {
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-  margin: 0;
-  line-height: 1.2;
-}
-
-/* UGC Section */
-.acc-ugc-section {
-  grid-column: span 1;
-}
-
-.acc-ugc-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 4rem;
-}
-
-.acc-diamonds {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.acc-diamond-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* Diamond Shape */
-.acc-diamond {
-  width: 100px;
-  height: 100px;
-  background-color: #334d80;
-  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  border-radius: 3px;
   display: flex;
   align-items: center;
   justify-content: center;
+  min-height: 60px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
-.acc-diamond-text {
-  color: #ffffff;
-  font-size: 1.5rem;
-  font-weight: 700;
-}
-
-.acc-diamond-label {
-  background-color: #334d80;
-  color: #ffffff;
-  font-size: 0.75rem;
-  font-weight: 500;
-  padding: 0.25rem 0.75rem;
-  margin-top: 0.25rem;
-  border-radius: 0.125rem;
-  width: 100%;
-  text-align: center;
-}
-
-.acc-ugc-box {
-  background-color: #334d80;
-  color: #ffffff;
-  text-align: center;
-  padding: 3rem 3rem;
-  border-radius: 0.25rem;
-  width: 100%;
-}
-
-.acc-ugc-text {
-  font-size: 1.125rem;
-  font-weight: 500;
-  margin: 0;
-}
-
-/* Tablet & Desktop Layout */
-@media (min-width: 768px) {
-  .acc-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .acc-naac-section {
-    grid-column: span 1;
-  }
-
-  .acc-award-box {
-    grid-column: span 1;
-  }
-
-  .acc-nba-section {
-    grid-column: span 2;
-  }
-
-  .acc-nba-wrapper {
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .acc-nba-box {
-    flex-grow: 1;
-  }
-
-  .acc-ugc-section {
-    grid-column: span 2;
-  }
-
-  .acc-ugc-wrapper {
-    flex-direction: row;
-    align-items: center;
-    gap: 2rem;
-  }
-
-  .acc-ugc-box {
-    flex-grow: 1;
-  }
-
-  .acc-naac-content {
-    text-align: left;
-  }
-
-  .acc-naac-grade {
-    justify-content: flex-start;
-  }
-}
-
-@media (min-width: 1024px) {
-  .acc-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .acc-naac-section {
-    grid-column: span 1;
-  }
-
-  .acc-award-box {
-    grid-column: span 2;
-  }
-
-  .acc-nba-section {
-    grid-column: span 3;
-  }
-
-  .acc-ugc-section {
-    grid-column: span 3;
-  }
-}
-
-/* Responsive Adjustments */
-@media (max-width: 640px) {
-  .acc-container {
-    padding: 1.5rem;
-  }
-
-  .acc-naac-title {
-    font-size: 2.5rem;
-  }
-
-  .acc-grade-text {
-    font-size: 1.5rem;
-  }
-
-  .acc-grade-letter {
-    font-size: 5rem;
-  }
-
-  .acc-award-text,
-  .acc-nba-text,
-  .acc-ugc-text {
-    font-size: 1rem;
-  }
-
-  .acc-nba-title {
-    font-size: 2.5rem;
-  }
-
-  .acc-diamond {
-    width: 80px;
-    height: 80px;
-  }
-
-  .acc-diamond-text {
-    font-size: 1.25rem;
-  }
-}
-/* Extra Large Boxes */
-.acc-award-content {
-  background-color: #334d80;
-  color: #ffffff;
-  text-align: center;
-  padding: 2.5rem 3rem; /* Extra large padding */
-  /* border-radius: 0.75rem; */
-  min-height: 100px; /* Ensure minimum height */
-}
-
-.acc-award-text {
-  font-size: 1.5rem; /* Extra large text */
-  /* font-weight: 600; */
-  margin: 0;
-  line-height: 1.5;
-}
-
-.acc-nba-box {
-  background-color: #334d80;
-  color: #ffffff;
-  text-align: center;
-  padding: 2.5rem 3rem;
-  /* border-radius: 0.75rem; */
-  width: 100%;
-  min-height: 100px;
-}
-
-.acc-nba-text {
-  font-size: 1.5rem;
-  /* font-weight: 600; */
-  margin: 0;
-  line-height: 1.5;
-}
-
-.acc-ugc-box {
-  background-color: #334d80;
-  color: #ffffff;
-  text-align: center;
-  padding: 2.4rem 3rem;
-  /* border-radius: 0.75rem; */
-  width: 100%;
-  min-height: 100px;
-}
-
-.acc-ugc-text {
-  font-size: 1.5rem;
-  /* font-weight: 600; */
-  margin: 0;
-  line-height: 1.5;
-}
-
-/* Extra Large Diamonds */
-.acc-diamond {
-  width: 140px;
-  height: 140px;
-  background-color: #334d80;
-  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.acc-diamond-text {
-  color: #ffffff;
-  font-size: 2rem;
-}
-
-.acc-diamond-label {
-  background-color: #334d80;
-  color: #ffffff;
+.acc-info-text {
   font-size: 1rem;
-  font-weight: 600;
-  padding: 0.75rem 1.25rem;
-  margin-top: 0.75rem;
-  border-radius: 0.5rem;
-  width: 100%;
+  font-weight: 400;
   text-align: center;
-}
-/* Option 1: Square fixed size */
-.acc-naac-logo {
-  width: 120px;
-  height: 120px;
-  object-fit: contain;
+  line-height: 1.4;
+  margin: 0;
+  color: #ffffff;
 }
 
-/* Option 2: Wider fixed size */
-.acc-naac-logo {
-  width: 180px;
-  height: 120px;
-  object-fit: contain;
-}
-
-/* Option 3: Taller fixed size */
-.acc-naac-logo {
-  width: 120px;
-  height: 150px;
-  object-fit: contain;
-}
-
-/* Option 4: Large fixed size */
-.acc-naac-logo {
-  width: 200px;
-  height: 160px;
-  object-fit: contain;
-}
-
-/* NBA Logo - Fixed size */
-.acc-nba-image {
-  width: 300px; /* Fixed width */
-  height: 250px; /* Fixed height */
-  object-fit: contain;
-}
-
-.acc-naac-logo {
-  width: 300px; /* Fixed width */
-  height: 200px; /* Fixed height */
-  object-fit: contain;
-}
-
-/* ----- Extra Large Screens (>1600px) ----- */
-@media (min-width: 1600px) {
-  .acc-container {
-    max-width: 1800px;
-  }
-
-  .acc-grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 3rem;
-  }
-
-  .acc-naac-title {
-    font-size: 3.5rem;
-  }
-
-  .acc-nba-title {
-    font-size: 3.25rem;
-  }
-
-  .acc-diamond {
-    width: 160px;
-    height: 160px;
-  }
-}
-
-/* ----- Large Desktops (1200px - 1599px) ----- */
-@media (max-width: 1599px) and (min-width: 1025px) {
-  .acc-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-  }
-
-  .acc-container {
-    padding: 2.5rem 3rem;
-  }
-
-  .acc-naac-title,
-  .acc-nba-title {
-    font-size: 3rem;
-  }
-
-  .acc-diamond {
-    width: 120px;
-    height: 120px;
-  }
-
-  .acc-diamond-text {
-    font-size: 1.75rem;
-  }
-}
-
-/* ----- Tablets / Laptops (769px - 1024px) ----- */
+/* Responsive Design */
 @media (max-width: 1024px) {
-  .acc-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
+  .acc-content-wrapper {
+    max-width: 900px;
   }
 
-  .acc-diamond {
-    width: 100px;
-    height: 100px;
+  .acc-row {
+    grid-template-columns: 160px 1fr;
+    gap: 1.2rem;
   }
 
-  .acc-diamond-text {
-    font-size: 1.4rem;
+  .acc-row:nth-child(2) {
+    grid-template-columns: 1fr 160px;
   }
 
-  .acc-naac-title {
-    font-size: 2.5rem;
+  .acc-logo-img {
+    max-width: 150px;
   }
 
-  .acc-nba-title {
-    font-size: 2.3rem;
+  .acc-info-box {
+    padding: 0.9rem 1.3rem;
+    min-height: 55px;
   }
 
-  .acc-award-text,
-  .acc-nba-text,
-  .acc-ugc-text {
-    font-size: 1.1rem;
-  }
-
-  .acc-container {
-    padding: 2rem;
+  .acc-info-text {
+    font-size: 0.95rem;
   }
 }
 
-/* ----- Tablets (600px - 768px) ----- */
 @media (max-width: 768px) {
-  .acc-grid {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+  .acc-page {
+    padding: 2rem 0.8rem;
   }
 
-  .acc-nba-wrapper,
-  .acc-ugc-wrapper {
-    flex-direction: column;
-    gap: 2rem;
-    text-align: center;
+  .acc-page-title {
+    font-size: 1.8rem;
   }
 
-  .acc-diamond {
-    width: 90px;
-    height: 90px;
+  .acc-page-header {
+    margin-bottom: 2rem;
   }
 
-  .acc-diamond-text {
-    font-size: 1.25rem;
-  }
-
-  .acc-award-content,
-  .acc-nba-box,
-  .acc-ugc-box {
-    padding: 2rem 1.5rem;
-  }
-
-  .acc-naac-title {
-    font-size: 2rem;
-  }
-
-  .acc-nba-title {
-    font-size: 2rem;
-  }
-
-  .acc-container {
-    padding: 1.5rem;
-  }
-}
-
-/* ----- Small Devices (480px - 599px) ----- */
-@media (max-width: 599px) {
-  .acc-wrapper {
-    padding: 1rem;
-    flex-direction: column;
-  }
-
-  .acc-container {
-    padding: 1rem;
-  }
-
-  .acc-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .acc-naac-title {
-    font-size: 1.75rem;
-  }
-
-  .acc-naac-logo,
-  .acc-nba-image {
-    width: 200px;
-    height: auto;
-  }
-
-  .acc-diamond {
-    width: 80px;
-    height: 80px;
-  }
-
-  .acc-diamond-text {
-    font-size: 1rem;
-  }
-
-  .acc-award-text,
-  .acc-ugc-text {
-    font-size: 1rem;
-    line-height: 1.4;
-  }
-
-  .acc-award-content,
-  .acc-nba-box,
-  .acc-ugc-box {
-    padding: 1.5rem;
-  }
-}
-
-/* ----- Small Phones (<480px) ----- */
-@media (max-width: 480px) {
-  .acc-grid {
-    grid-template-columns: 1fr;
+  .acc-content-wrapper {
     gap: 1rem;
   }
 
-  .acc-container {
-    padding: 1rem;
+  .acc-row {
+    grid-template-columns: 140px 1fr;
+    gap: 1rem;
   }
 
-  .acc-naac-title {
+  .acc-row:nth-child(2) {
+    grid-template-columns: 1fr 140px;
+  }
+
+  .acc-logo-img {
+    max-width: 130px;
+  }
+
+  .acc-info-box {
+    padding: 0.8rem 1.2rem;
+    min-height: 50px;
+  }
+
+  .acc-info-text {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .acc-row,
+  .acc-row:nth-child(2) {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+    justify-items: center;
+  }
+
+  .acc-logo-box {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .acc-logo-img {
+    max-width: 150px;
+  }
+
+  .acc-info-box {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .acc-page {
+    padding: 1.5rem 0.5rem;
+  }
+
+  .acc-page-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .acc-page-title {
     font-size: 1.5rem;
   }
 
-  .acc-nba-title {
-    font-size: 1.5rem;
+  .acc-title-underline {
+    width: 60px;
+    height: 3px;
   }
 
-  .acc-diamond {
-    width: 70px;
-    height: 70px;
+  .acc-content-wrapper {
+    gap: 0.8rem;
   }
 
-  .acc-diamond-text {
-    font-size: 0.9rem;
+  .acc-logo-img {
+    max-width: 120px;
   }
 
-  .acc-award-content,
-  .acc-nba-box,
-  .acc-ugc-box {
-    padding: 1rem;
+  .acc-info-box {
+    padding: 0.7rem 1rem;
+    min-height: 45px;
   }
 
-  .acc-award-text,
-  .acc-ugc-text {
-    font-size: 0.9rem;
-  }
-
-  .acc-nba-text {
+  .acc-info-text {
     font-size: 0.85rem;
   }
 }
