@@ -8,7 +8,7 @@ export default function CampusLifeCard() {
         <div className="cl-media">
           <img
             className="cl-media-img"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPSnUThTQFZngTLQzj9oHOE-zeAagYNVCm2xybUb8aq7t_O4eT-B6howqIEKRs5l350h0TfuFx7j54E3hDBbG4lRzJKElgThPxMkNS5Z-Hl7x1TuKqZdUM4XiMN1f4qtOQ5xdGmLpgWqwTPAc0rcaqbyI-4uNy0gV4NfyUtco4WAna2fvXesV2yqV975JdBqlLAXHT8KCbp5FoEl8SUtCHJLQ7QAuZCLbgmhvFrD38MKWGX125bMDqf42m0QRYy1LS9lRH1kveX24t"
+            src="/img.jpeg"
             alt="Students studying in a library"
           />
         </div>

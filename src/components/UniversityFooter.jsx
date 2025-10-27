@@ -118,8 +118,8 @@ export default function UniversityFooter() {
       </div>
 
       <div className="uf-copy">
-        Copyright © 2025 | TCET University (proposed) | All rights reserved |
-        Design, Developed & Maintain by TEG Marketing Group
+        Copyright © 2025 | TCET University (Deemed to be University) | All rights reserved |(An University under Zagdusingh Charitable Trust )
+       
       </div>
     </footer>
   );
