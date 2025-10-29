@@ -1,16 +1,75 @@
 import React, { useState } from "react";
-import "./navbar.css";
+import "./Navbar.css";
 import { Link } from "react-router-dom";
+
+const dropdowns = {
+  "About Us": [
+    { name: "About Us", link: "/about/#" },
+    { name: "Chairman's Message", link: "/about/chairman" },
+    { name: "CEO's Message", link: "/about/ceo" },
+    { name: "Principal's Message", link: "/about/#" },
+    { name: "Vice Principal's & Director IQAC Message", link: "/about/#" },
+    { name: "Dean's(SSW) Message", link: "/about/#" },
+    { name: "Dean's(Academic) Message", link: "/about/#" },
+    { name: "Institutional Growth", link: "/about/#" },
+    { name: "Recognition & Awards", link: "/about/#" },
+    { name: "Testimonial", link: "/about/#" },
+    { name: "DCDC", link: "#" },
+    { name: "NIRF Data", link: "/about/#" },
+    { name: "Mandatory Disclosures", link: "#" },
+  ],
+  Programmes: [
+    { name: "Program List", link: "/programmespage" },
+    { name: "UG", link: "/programmes/#" },
+     { name: "BE", link: "/programmes/#" },
+    { name: "MBA", link: "/programmes/#" },
+    { name: "Ph.D", link: "/programmes/phd" },
+  ],
+  Admissions: [
+    { name: "Admission Notification", link: "/admission-notification" },
+    { name: "Seat Distribution", link: "/seat-distribution" },
+    { name: "Fees Structure", link: "/fees-structure" },
+  ],
+  Academics: [
+    { name: "Faculty", link: "/faculty" },
+    { name: "Academic Calendar", link: "/academic-calendar" },
+  ],
+  "Life@TU": [
+    { name: "Student Activities", link: "/life-activities" },
+    { name: "Facilities", link: "/life-facilities" },
+  ],
+  NCC: [{ name: "NCC Info", link: "/ncc" }],
+  "Web Portals": [
+    { name: "ERP Portal", link: "/erp" },
+    { name: "Student Portal", link: "/student-portal" },
+  ],
+  "Contact Us": [
+    { name: "Travel Direction", link: "/contact" },
+    { name: "Contact Information", link: "/location" },
+  ],
+};
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState(null);
+  const [openMobileDropdown, setOpenMobileDropdown] = useState(null);
+
+  const menuItems = [
+    "About Us",
+    "Programmes",
+    "Admissions",
+    "Academics",
+    "Life@TU",
+    "NCC",
+    "Web Portals",
+    "Contact Us",
+  ];
 
   return (
     <header className="uni-header">
       <div className="uni-diagonal-bg">
         <div className="uni-container">
           <div className="uni-header-content">
-            {/* Logo and Title Section */}
             <div className="uni-logo-section">
               <Link to="/">
                 <img
@@ -21,7 +80,6 @@ export default function Navbar() {
               </Link>
             </div>
 
-            {/* Navigation Section */}
             <div className="uni-nav-section">
               <div className="uni-nav-wrapper">
                 {/* Top Navigation */}
@@ -35,43 +93,36 @@ export default function Navbar() {
                         TEG
                       </a>
                     </li>
-                    {/* <li><span className="uni-nav-divider">|</span></li> */}
                     <li>
                       <a href="#" className="uni-nav-link">
                         Faculty
                       </a>
                     </li>
-                    {/* <li><span className="uni-nav-divider">|</span></li> */}
                     <li>
                       <a href="#" className="uni-nav-link">
                         Alumni
                       </a>
                     </li>
-                    {/* <li><span className="uni-nav-divider">|</span></li> */}
                     <li>
                       <a href="#" className="uni-nav-link">
                         Training & Placement
                       </a>
                     </li>
-                    {/* <li><span className="uni-nav-divider">|</span></li> */}
                     <li>
                       <a href="#" className="uni-nav-link">
                         Research & Development
                       </a>
                     </li>
-                    {/* <li><span className="uni-nav-divider">|</span></li> */}
                     <li>
                       <a href="#" className="uni-nav-link">
                         Blogs
                       </a>
                     </li>
-                    {/* <li><span className="uni-nav-divider">|</span></li> */}
                     <li>
                       <a href="#" className="uni-nav-link">
                         Careers
                       </a>
                     </li>
-
                     <li>
                       <a href="#" className="uni-apply-btn">
                         Apply Now
@@ -83,58 +134,58 @@ export default function Navbar() {
                 {/* Bottom Navigation */}
                 <nav className="uni-nav-bottom">
                   <ul className="uni-nav-list-bottom">
-                    <li>
-                      <a href="/about" className="uni-nav-link-bottom">
-                        About Us
-                      </a>
-                    </li>
-                    {/* <li><span className="uni-nav-divider">|</span></li> */}
-                    <li>
-                      <a href="/programmespage" className="uni-nav-link-bottom">
-                        Programmes
-                      </a>
-                    </li>
-                    {/* <li><span className="uni-nav-divider">|</span></li> */}
-                    <li>
-                      <a href="#" className="uni-nav-link-bottom">
-                        Admissions
-                      </a>
-                    </li>
-                    {/* <li><span className="uni-nav-divider">|</span></li> */}
-                    <li>
-                      <a href="#" className="uni-nav-link-bottom">
-                        Academics
-                      </a>
-                    </li>
-                    {/* <li><span className="uni-nav-divider">|</span></li> */}
-                    <li>
-                      <a href="#" className="uni-nav-link-bottom">
-                        Life@TU
-                      </a>
-                    </li>
-                    {/* <li><span className="uni-nav-divider">|</span></li> */}
-                    <li>
-                      <a href="#" className="uni-nav-link-bottom">
-                        NCC
-                      </a>
-                    </li>
-                    {/* <li><span className="uni-nav-divider">|</span></li> */}
-                    <li>
-                      <a href="#" className="uni-nav-link-bottom">
-                        Web Portals
-                      </a>
-                    </li>
-                    {/* <li><span className="uni-nav-divider">|</span></li> */}
-                    <li>
-                      <a href="#" className="uni-nav-link-bottom">
-                        Contact Us
-                      </a>
-                    </li>
+                    {menuItems.map((menu) => (
+                      <li
+                        key={menu}
+                        className="has-dropdown"
+                        tabIndex={0}
+                        onMouseEnter={() => setOpenDropdown(menu)}
+                        onMouseLeave={() => setOpenDropdown(null)}
+                        onFocus={() => setOpenDropdown(menu)}
+                        onBlur={() => setOpenDropdown(null)}
+                        style={{ position: "relative" }}
+                      >
+                        <a
+                          href={`/${menu.replace(/\s/g, '').toLowerCase()}`}
+                          className="uni-nav-link-bottom"
+                          onClick={(e) => e.preventDefault()}
+                        >
+                          {menu}
+                        </a>
+                        {dropdowns[menu] && (
+                          <div
+                            className="dropdown"
+                            style={{
+                              display:
+                                openDropdown === menu ? "block" : "none",
+                              position: "absolute",
+                              left: 0,
+                              top: "100%",
+                              background: "inherit",
+                              minWidth: "200px",
+                              zIndex: 100,
+                            }}
+                          >
+                            <ul className="dropdown-list">
+                              {dropdowns[menu].map((item, idx) => (
+                                <li key={item.link + idx}>
+                                  <Link
+                                    to={item.link}
+                                    className="uni-nav-link-bottom"
+                                  >
+                                    {item.name}
+                                  </Link>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
+                        )}
+                      </li>
+                    ))}
                   </ul>
                 </nav>
               </div>
 
-              {/* Hamburger Menu */}
               {/* Hamburger Menu */}
               <div className="uni-menu-toggle">
                 <button
@@ -153,6 +204,60 @@ export default function Navbar() {
           </div>
         </div>
       </div>
+      {/* Mobile Dropdown */}
+      {menuOpen && (
+        <nav
+          className="uni-nav-bottom-mobile"
+          style={{
+            background: "inherit",
+            position: "absolute",
+            top: "100px",
+            left: 0,
+            width: "100%",
+            zIndex: 1000,
+          }}
+        >
+          <ul className="uni-nav-list-bottom" style={{ flexDirection: "column" }}>
+            {menuItems.map((menu) => (
+              <li key={menu} style={{ position: "relative", width: "100%" }}>
+                <button
+                  className="mobile-menu-button"
+                  onClick={() =>
+                    setOpenMobileDropdown(
+                      openMobileDropdown === menu ? null : menu
+                    )
+                  }
+                  aria-expanded={openMobileDropdown === menu}
+                  aria-controls={`${menu}-submenu`}
+                >
+                  {menu}
+                  <span className="mobile-dropdown-arrow">
+                    {openMobileDropdown === menu ? "▲" : "▼"}
+                  </span>
+                </button>
+                {dropdowns[menu] && openMobileDropdown === menu && (
+                  <ul
+                    id={`${menu}-submenu`}
+                    className="mobile-dropdown-list"
+                  >
+                    {dropdowns[menu].map((item, idx) => (
+                      <li key={item.link + idx}>
+                        <Link
+                          to={item.link}
+                          className="uni-nav-link-bottom"
+                          onClick={() => setMenuOpen(false)}
+                        >
+                          {item.name}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </li>
+            ))}
+          </ul>
+        </nav>
+      )}
     </header>
   );
 }

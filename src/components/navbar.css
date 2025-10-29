@@ -238,7 +238,7 @@
 
 /* Material Icons */
 .material-icons {
-  font-family: "Material Icons";
+ 
   font-size: 24px;
 }
 
@@ -378,4 +378,102 @@
   width: 32px; /* Increased from 24px */
   height: 32px; /* Increased from 24px */
   object-fit: contain;
+}
+/* Dropdown container for desktop */
+.has-dropdown .dropdown {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  min-width: 200px;
+  background: inherit;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Show dropdown when parent hovered or focused */
+.has-dropdown:hover .dropdown,
+.has-dropdown:focus-within .dropdown {
+  display: block;
+}
+
+/* Dropdown list styles */
+.dropdown-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Dropdown list item */
+.dropdown-list li {
+  margin: 0;
+}
+
+/* Dropdown link styles */
+.dropdown-list li .uni-nav-link-bottom {
+  display: block;
+  padding: 8px 18px;
+  text-decoration: none;
+  color: inherit;
+  white-space: nowrap;
+}
+
+/* Hover on dropdown links */
+.dropdown-list li .uni-nav-link-bottom:hover {
+  color: #3b82f6; /* keeping consistent hover color */
+  background-color: #f0f0f0; /* subtle highlight */
+}
+
+/* Mobile menu styles */
+.uni-nav-bottom-mobile {
+  background: inherit;
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Mobile dropdown list */
+.mobile-dropdown-list {
+  list-style: none;
+  margin: 0;
+  padding-left: 20px;
+  background: inherit;
+}
+
+/* Mobile dropdown link */
+.mobile-dropdown-list li .uni-nav-link-bottom {
+  display: block;
+  padding: 12px 0;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Mobile dropdown link hover */
+.mobile-dropdown-list li .uni-nav-link-bottom:hover {
+  color: #3b82f6; /* consistent hover */
+}
+
+/* Mobile menu toggle button */
+.mobile-menu-button {
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  color: #fff;
+  padding: 15px 18px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Arrow in mobile menu */
+.mobile-dropdown-arrow {
+  margin-left: 8px;
+  font-size: 12px;
+  user-select: none;
 }
