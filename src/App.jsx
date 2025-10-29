@@ -2,6 +2,9 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LandingPage from "./Pages/LandingPage";
 import AboutPage from "./Pages/AboutPage";
 import ProgrammesPage from "./Pages/ProgrammesPage";
+import ChairmanMessage from "./Pages/About Us/ChairmanMessage";
+import CeoMessage from "./Pages/About Us/CeoMessage";
+
 // import Navbar from './components/Navbar';
 // import Footer from './components/Footer';
 
@@ -13,6 +16,8 @@ export default function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/about/chairman" element={<ChairmanMessage />} />
+          <Route path="/about/ceo" element={<CeoMessage />} />
           <Route path="/programmespage" element={<ProgrammesPage />} />
         </Routes>
         {/* <Footer /> */}
