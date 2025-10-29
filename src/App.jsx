@@ -4,7 +4,11 @@ import AboutPage from "./Pages/AboutPage";
 import ProgrammesPage from "./Pages/ProgrammesPage";
 import ChairmanMessage from "./Pages/About Us/ChairmanMessage";
 import CeoMessage from "./Pages/About Us/CeoMessage";
-
+import Principal from "./Pages/About Us/Principal";
+import VicePrincipal from "./Pages/About Us/VicePrincipal";
+import DeanMessage from "./Pages/About Us/DeanMessage";
+import Dean from "./Pages/About Us/Dean";
+import Deans from "./Pages/About Us/Deans";
 // import Navbar from './components/Navbar';
 // import Footer from './components/Footer';
 
@@ -18,6 +22,12 @@ export default function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/about/chairman" element={<ChairmanMessage />} />
           <Route path="/about/ceo" element={<CeoMessage />} />
+          <Route path="/about/principal" element={<Principal />} />
+          <Route path="/about/vice-principal" element={<VicePrincipal />} />
+          <Route path="/about/dean-message" element={<DeanMessage />} />
+          <Route path="/about/dean" element={<Dean />} />
+          <Route path="/about/dean-academic" element={<Deans />} />
+
           <Route path="/programmespage" element={<ProgrammesPage />} />
         </Routes>
         {/* <Footer /> */}
