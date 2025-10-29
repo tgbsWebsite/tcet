@@ -55,6 +55,11 @@ Congratulations and warm welcome to all the engineering aspirants to TCET!!',
             <li><a href="/about/#">About Us</a></li>
             <li><a href="/about/chairman">Chairman's Message</a></li>
             <li><a href="/about/ceo">CEO's Message</a></li>
+            <li><a href="/about/principal">Principal's Message</a></li>
+         <li><a href="/about/vice-principal">V.P & Director IQAC Message</a></li>
+      <li><a href="/about/dean-message">Dean's (SSW) Message</a></li>
+       <li><a href="/about/dean">Dean's (R&D) Message</a></li>
+         <li><a href="/about/dean-academic">Dean's (Academic) Message</a></li>
             {/* ...other sidebar links */}
           </ul>
         </aside>

@@ -32,10 +32,10 @@ function MessageCard({ data }) {
 }
 
 export default function CeoMessage() {
- const infoData = {
-  name: 'Karan Singh',
-  title: 'CEO',
-  message: `“You’ve got to find what you like. Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. And the only way to do great work is to like what you do.” - Steve Jobs
+  const infoData = {
+    name: 'Karan Singh',
+    title: 'CEO',
+    message: `“You’ve got to find what you like. Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. And the only way to do great work is to like what you do.” - Steve Jobs
 
 It is with great pleasure that I welcome you to our esteemed technical institute, a beacon of excellence and innovation situated in the heart of Mumbai. We are proud to announce our successful alignment with the transformative vision of the National Education Policy (NEP) 2020, which promises to revolutionize the educational landscape. Our institute, always at the forefront of progressive educational practices, has embraced NEP 2020 to further enrich our curriculum with a focus on multidisciplinary learning, critical thinking, and technological integration. Our readiness to attain deemed university status stands as a testament to our unwavering commitment to delivering world-class education and fostering an environment where students can thrive and excel.
 
@@ -48,13 +48,13 @@ We invite you to join us on this exciting journey of discovery and growth. I am 
 MR.KARAN SINGH
 Undergraduate in Business Studies with Management, Middlesex University, London
 Post Graduate Diploma in Business Management (PGDBM), NMIMS University`,
-  imageUrl: '/images/chairman.webp'
-};
+    imageUrl: '/images/chairman.webp'
+  };
 
   return (
     <>
       <Navbar />
-    
+
       <div className="page-container">
         <aside className="sidebar">
           <h3>About TCET</h3>
@@ -62,6 +62,11 @@ Post Graduate Diploma in Business Management (PGDBM), NMIMS University`,
             <li><a href="/about/#">About Us</a></li>
             <li><a href="/about/chairman">Chairman's Message</a></li>
             <li><a href="/about/ceo">CEO's Message</a></li>
+            <li><a href="/about/principal">Principal's Message</a></li>
+            <li><a href="/about/vice-principal">V.P & Director IQAC Message</a></li>
+            <li><a href="/about/dean-message">Dean's (SSW) Message</a></li>
+             <li><a href="/about/dean">Dean's (R&D) Message</a></li>
+               <li><a href="/about/dean-academic">Dean's (Academic) Message</a></li>
             {/* ...other sidebar links */}
           </ul>
         </aside>
@@ -69,7 +74,7 @@ Post Graduate Diploma in Business Management (PGDBM), NMIMS University`,
           <MessageCard data={infoData} />
         </main>
       </div>
-     <UniversityFooter />
-        </>
+      <UniversityFooter />
+    </>
   );
 };
